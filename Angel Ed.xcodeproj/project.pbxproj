@@ -22,6 +22,7 @@
 		2CE24AC918E4F5C40091D406 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA818E4F5C40091D406 /* UIKit.framework */; };
 		2CE24AD118E4F5C40091D406 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE24ACF18E4F5C40091D406 /* InfoPlist.strings */; };
 		2CE24AD318E4F5C40091D406 /* Angel_EdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE24AD218E4F5C40091D406 /* Angel_EdTests.m */; };
+		2CE24ADE18E4F8E30091D406 /* Posts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE24ADD18E4F8E30091D406 /* Posts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		2CE24ACE18E4F5C40091D406 /* Angel EdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Angel EdTests-Info.plist"; sourceTree = "<group>"; };
 		2CE24AD018E4F5C40091D406 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CE24AD218E4F5C40091D406 /* Angel_EdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Angel_EdTests.m; sourceTree = "<group>"; };
+		2CE24ADC18E4F8E30091D406 /* Posts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posts.h; sourceTree = "<group>"; };
+		2CE24ADD18E4F8E30091D406 /* Posts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				2CE24ABD18E4F5C40091D406 /* GAIDetailViewController.m */,
 				2CE24ABF18E4F5C40091D406 /* Images.xcassets */,
 				2CE24AAB18E4F5C40091D406 /* Supporting Files */,
+				2CE24ADC18E4F8E30091D406 /* Posts.h */,
+				2CE24ADD18E4F8E30091D406 /* Posts.m */,
 			);
 			path = "Angel Ed";
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				2CE24ABB18E4F5C40091D406 /* GAIMasterViewController.m in Sources */,
 				2CE24AB118E4F5C40091D406 /* main.m in Sources */,
 				2CE24ABE18E4F5C40091D406 /* GAIDetailViewController.m in Sources */,
+				2CE24ADE18E4F8E30091D406 /* Posts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
