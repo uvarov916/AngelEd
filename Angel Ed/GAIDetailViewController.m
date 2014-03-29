@@ -58,6 +58,8 @@
     else {
         self.textView.text = kDefaultText;
     }
+    
+    titleView.editable = NO;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
