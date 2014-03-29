@@ -65,31 +65,6 @@ static NSString *currentKey;
 }
 
 
-
-//// Setting text, title and category
-//+(void)setTextForCurrentKey:(NSString *)text {
-//    [self setText:text forKey:currentKey];
-//}
-//+(void)setTitleForCurrentKey:(NSString *)title {
-//    [self setTitle:title forKey:currentKey];
-//}
-//+(void)setCategoryForCurrentKey:(NSString *)category {
-//    [self setCategory:category forKey:currentKey];
-//}
-//
-//+(void)setText:(NSString *)text forKey:(NSString *)key {
-//    [allPosts setObject:<#(id)#> forKey:key];
-//    if ([allPosts objectForKey:key] == nil) {
-//        
-//    }
-//}
-//+(void)setCategory:(NSString *)category forKey:(NSString *)key {
-//    [[Posts getPostDataForKey:key] setObject:category forKey:kPostCategory];
-//}
-//+(void)setTitle:(NSString *)title forKey:(NSString *)key {
-//    [[Posts getPostDataForKey:key] setObject:title forKey:kPostTitle];
-//}
-
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategory:(NSString *)category forKey:(NSString *)key {
     
     if ([allPosts objectForKey:key] == nil) {

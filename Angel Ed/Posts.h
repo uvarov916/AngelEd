@@ -42,14 +42,6 @@
 +(void)setCurrentKey:(NSString *)key;
 +(NSString *)getCurrentKey;
 
-//// Setting text, title and category
-//+(void)setTextForCurrentKey:(NSString *)text;
-//+(void)setTitleForCurrentKey:(NSString *)title;
-//+(void)setCategoryForCurrentKey:(NSString *)category;
-//+(void)setText:(NSString *)text forKey:(NSString *)key;
-//+(void)setCategory:(NSString *)category forKey:(NSString *)key;
-//+(void)setTitle:(NSString *)title forKey:(NSString *)key;
-
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategory:(NSString *)category forKey:(NSString *)key;
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategoryforCurrentKey:(NSString *)category;
 
