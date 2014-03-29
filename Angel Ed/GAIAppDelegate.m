@@ -7,12 +7,14 @@
 //
 
 #import "GAIAppDelegate.h"
+#import "Posts.h"
 
 @implementation GAIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Posts getAllPosts];
     return YES;
 }
 							

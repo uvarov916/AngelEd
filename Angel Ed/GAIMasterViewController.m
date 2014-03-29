@@ -9,6 +9,7 @@
 #import "GAIMasterViewController.h"
 
 #import "GAIDetailViewController.h"
+#import "Posts.h"
 
 @interface GAIMasterViewController () {
     NSMutableArray *_objects;
@@ -32,6 +33,23 @@
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self makeObjects];
+    [self.tableView reloadData];
+}
+
+
+-(void)makeObjects {
+    
+    _objects = [NSMutableArray arrayWithArray:[[Posts getAllPosts] allKeys]];
+    [_objects sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [(NSDate *)obj2 compare:(NSDate *)obj1];
+    }];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -40,12 +58,17 @@
 
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
+    [self makeObjects];
+
+    NSString *key = [[NSDate date] description];
+    [Posts setTitle:kDefaultTitle setText:kDefaultText setCategory:kDefaultCategory forKey:key];
+    [Posts setCurrentKey:key];
+    [_objects insertObject:key atIndex:0];
+
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    [self performSegueWithIdentifier:kDetailView sender:self];
 }
 
 #pragma mark - Table View
@@ -65,7 +88,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostTitle ];
     return cell;
 }
 

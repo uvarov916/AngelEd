@@ -469,6 +469,7 @@
 				2CE24AD818E4F5C40091D406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CE24AD918E4F5C40091D406 /* Build configuration list for PBXNativeTarget "Angel EdTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +478,7 @@
 				2CE24ADB18E4F5C40091D406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

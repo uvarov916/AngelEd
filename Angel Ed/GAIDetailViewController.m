@@ -7,12 +7,17 @@
 //
 
 #import "GAIDetailViewController.h"
+#import "Posts.h"
 
 @interface GAIDetailViewController ()
 - (void)configureView;
 @end
 
 @implementation GAIDetailViewController
+
+@synthesize titleView;
+@synthesize categoryView;
+@synthesize textView;
 
 #pragma mark - Managing the detail item
 
@@ -21,6 +26,8 @@
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
         
+        [Posts setCurrentKey:_detailItem];
+        
         // Update the view.
         [self configureView];
     }
@@ -28,12 +35,51 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
+    NSString *currentTitle = [post objectForKey:kPostTitle];
+    NSString *currentCategory = [post objectForKey:kPostCategory];
+    NSString *currentText = [post objectForKey:kPostText];
+    
+    if (![currentTitle isEqualToString:@""]) {
+        self.titleView.text = currentTitle;
+    }
+    else {
+        self.titleView.text = kDefaultTitle;
+    }
+    if (![currentCategory isEqualToString:@""]) {
+        self.categoryView.text = currentCategory;
+    }
+    else {
+        self.categoryView.text = kDefaultCategory;
+    }
+    if (![currentText isEqualToString:@""]) {
+        self.textView.text = currentText;
+    }
+    else {
+        self.textView.text = kDefaultText;
     }
 }
+
+-(void)viewWillDisappear:(BOOL)animated {
+    
+    if (![self.textView.text isEqualToString:@""]) {
+        NSString *currentTitle = kDefaultTitle;
+        NSString *currentCategory = kDefaultCategory;
+        if (![self.titleView.text isEqualToString:@""]) {
+            currentTitle = self.titleView.text;
+        }
+        if (![self.categoryView.text isEqualToString:@""]) {
+            currentCategory = self.categoryView.text;
+        }
+        [Posts setTitle:currentTitle setText:self.textView.text setCategoryforCurrentKey:currentCategory];
+    }
+    else {
+        [Posts removePostForKey:[Posts getCurrentKey]];
+    }
+    
+    [Posts savePosts];
+}
+
 
 - (void)viewDidLoad
 {
