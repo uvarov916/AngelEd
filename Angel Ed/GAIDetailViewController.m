@@ -8,6 +8,7 @@
 
 #import "GAIDetailViewController.h"
 #import "Posts.h"
+#import "MPTextView.h"
 
 @interface GAIDetailViewController ()
 - (void)configureView;
@@ -59,7 +60,12 @@
         self.textView.text = kDefaultText;
     }
     
-    titleView.editable = NO;
+    ((MPTextView *)titleView).placeholderText = @"Placeholder";
+    ((MPTextView *)categoryView).placeholderText = @"Placeholder";
+    ((MPTextView *)textView).placeholderText = @"Placeholder";
+    
+    // To disable editing
+    // self.titleView.editable = NO;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -79,6 +85,7 @@
         [Posts removePostForKey:[Posts getCurrentKey]];
     }
     
+    
     [Posts savePosts];
 }
 
@@ -88,6 +95,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+
+    
 }
 
 - (void)didReceiveMemoryWarning
