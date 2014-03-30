@@ -60,9 +60,9 @@
         self.textView.text = kDefaultText;
     }
     
-    ((MPTextView *)titleView).placeholderText = @"Placeholder";
-    ((MPTextView *)categoryView).placeholderText = @"Placeholder";
-    ((MPTextView *)textView).placeholderText = @"Placeholder";
+    ((MPTextView *)titleView).placeholderText = kTitlePlaceholder;
+    ((MPTextView *)categoryView).placeholderText = kCategoryPlaceholder;
+    ((MPTextView *)textView).placeholderText = kTextPlaceholder;
     
     // To disable editing
     // self.titleView.editable = NO;

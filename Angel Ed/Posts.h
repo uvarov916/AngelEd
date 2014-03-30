@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#define kDefaultText @"New Post"
-#define kDefaultTitle @"Title"
-#define kDefaultCategory @"Unassigned"
+#define kDefaultText @""
+#define kDefaultTitle @""
+#define kDefaultCategory @""
+
+#define kCategoryPlaceholder @"Category"
+#define kTextPlaceholder @"Your post"
+#define kTitlePlaceholder @"Title"
 
 #define kAllPosts @"posts"
 
