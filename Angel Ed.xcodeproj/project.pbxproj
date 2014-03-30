@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
 		2CE24AA518E4F5C40091D406 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA418E4F5C40091D406 /* Foundation.framework */; };
 		2CE24AA718E4F5C40091D406 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */; };
 		2CE24AA918E4F5C40091D406 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA818E4F5C40091D406 /* UIKit.framework */; };
@@ -23,9 +24,6 @@
 		2CE24AD118E4F5C40091D406 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE24ACF18E4F5C40091D406 /* InfoPlist.strings */; };
 		2CE24AD318E4F5C40091D406 /* Angel_EdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE24AD218E4F5C40091D406 /* Angel_EdTests.m */; };
 		2CE24ADE18E4F8E30091D406 /* Posts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE24ADD18E4F8E30091D406 /* Posts.m */; };
-		2CE24B3018E754EE0091D406 /* Icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE24B2D18E754EE0091D406 /* Icon_58.png */; };
-		2CE24B3118E754EE0091D406 /* Icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE24B2E18E754EE0091D406 /* Icon_80.png */; };
-		2CE24B3218E754EE0091D406 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE24B2F18E754EE0091D406 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C58931518E7A88400E392B6 /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
+		2C58931618E7A88400E392B6 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
 		2CE24AA118E4F5C40091D406 /* Angel Ed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Angel Ed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE24AA418E4F5C40091D406 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,9 +62,6 @@
 		2CE24AD218E4F5C40091D406 /* Angel_EdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Angel_EdTests.m; sourceTree = "<group>"; };
 		2CE24ADC18E4F8E30091D406 /* Posts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posts.h; sourceTree = "<group>"; };
 		2CE24ADD18E4F8E30091D406 /* Posts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Posts.m; sourceTree = "<group>"; };
-		2CE24B2D18E754EE0091D406 /* Icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_58.png; path = images/Icon_58.png; sourceTree = "<group>"; };
-		2CE24B2E18E754EE0091D406 /* Icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon_80.png; path = images/Icon_80.png; sourceTree = "<group>"; };
-		2CE24B2F18E754EE0091D406 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +91,6 @@
 		2CE24A9818E4F5C40091D406 = {
 			isa = PBXGroup;
 			children = (
-				2CE24B2618E74A9E0091D406 /* Images */,
 				2CE24AAA18E4F5C40091D406 /* Angel Ed */,
 				2CE24ACC18E4F5C40091D406 /* Angel EdTests */,
 				2CE24AA318E4F5C40091D406 /* Frameworks */,
@@ -136,6 +132,8 @@
 				2CE24AAB18E4F5C40091D406 /* Supporting Files */,
 				2CE24ADC18E4F8E30091D406 /* Posts.h */,
 				2CE24ADD18E4F8E30091D406 /* Posts.m */,
+				2C58931518E7A88400E392B6 /* UIColor+Extras.h */,
+				2C58931618E7A88400E392B6 /* UIColor+Extras.m */,
 			);
 			path = "Angel Ed";
 			sourceTree = "<group>";
@@ -167,16 +165,6 @@
 				2CE24ACF18E4F5C40091D406 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2CE24B2618E74A9E0091D406 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				2CE24B2D18E754EE0091D406 /* Icon_58.png */,
-				2CE24B2E18E754EE0091D406 /* Icon_80.png */,
-				2CE24B2F18E754EE0091D406 /* Icon@2x.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,11 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE24AC018E4F5C40091D406 /* Images.xcassets in Resources */,
-				2CE24B3218E754EE0091D406 /* Icon@2x.png in Resources */,
 				2CE24AAF18E4F5C40091D406 /* InfoPlist.strings in Resources */,
 				2CE24AB818E4F5C40091D406 /* Main.storyboard in Resources */,
-				2CE24B3018E754EE0091D406 /* Icon_58.png in Resources */,
-				2CE24B3118E754EE0091D406 /* Icon_80.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */,
 				2CE24AB518E4F5C40091D406 /* GAIAppDelegate.m in Sources */,
 				2CE24ABB18E4F5C40091D406 /* GAIMasterViewController.m in Sources */,
 				2CE24AB118E4F5C40091D406 /* main.m in Sources */,

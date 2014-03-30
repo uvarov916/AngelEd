@@ -8,6 +8,7 @@
 
 #import "GAIAppDelegate.h"
 #import "Posts.h"
+#import "UIColor+Extras.h"
 
 @implementation GAIAppDelegate
 
@@ -15,6 +16,9 @@
 {
     // Override point for customization after application launch.
     [Posts getAllPosts];
+    
+    [self customizeUserInterface];
+
     return YES;
 }
 							
@@ -43,6 +47,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Helper methods
+
+-(void)customizeUserInterface {
+    
+    // Customize the nav bar
+    // [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithR:34 G:137 B:228 A:0.9]];
+    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    
 }
 
 @end
