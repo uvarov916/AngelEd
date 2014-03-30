@@ -27,7 +27,7 @@
         <scene sceneID="cUi-kZ-frf">
             <objects>
                 <navigationController id="rS3-R9-Ivy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Posts" id="8s0-QG-EZy"/>
+                    <tabBarItem key="tabBarItem" title="Posts" image="posts" id="8s0-QG-EZy"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -172,13 +172,17 @@
         <scene sceneID="wD6-yH-buR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oJ9-dG-A30" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="ocH-nw-fKh"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="ocH-nw-fKh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cub-0C-MA2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cKb-N3-wVW">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="qqu-oD-PFE" kind="relationship" relationship="rootViewController" id="bG2-Ek-M2Q"/>
                     </connections>
@@ -191,7 +195,7 @@
         <scene sceneID="vPb-JK-Y2d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SUb-mO-jAy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="vaN-Ua-wcB"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="vaN-Ua-wcB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QcJ-bG-coW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -207,6 +211,11 @@
             <point key="canvasLocation" x="524" y="-609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="posts" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="user" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

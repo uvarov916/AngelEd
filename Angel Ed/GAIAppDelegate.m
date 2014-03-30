@@ -63,6 +63,9 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    // Changing tab bar styles
+    // [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"]];
+    // [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
 }
 
