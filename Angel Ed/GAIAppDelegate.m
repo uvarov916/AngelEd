@@ -64,8 +64,20 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Changing tab bar styles
-    // [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"]];
-    // [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"]];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    
+    UITabBarItem *tabPosts = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabProfile = [tabBar.items objectAtIndex:1];
+    UITabBarItem *tabSettings = [tabBar.items objectAtIndex:2];
+
+    tabPosts.image = [[UIImage imageNamed:@"posts"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabProfile.image = [[UIImage imageNamed:@"profile"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabSettings.image = [[UIImage imageNamed:@"settings"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
 }
 

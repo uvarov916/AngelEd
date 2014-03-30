@@ -94,6 +94,7 @@
 		2CE24A9818E4F5C40091D406 = {
 			isa = PBXGroup;
 			children = (
+				2CE24AB618E4F5C40091D406 /* Main.storyboard */,
 				2CE24AAA18E4F5C40091D406 /* Angel Ed */,
 				2CE24ACC18E4F5C40091D406 /* Angel EdTests */,
 				2CE24AA318E4F5C40091D406 /* Frameworks */,
@@ -126,7 +127,6 @@
 			children = (
 				2CE24AB318E4F5C40091D406 /* GAIAppDelegate.h */,
 				2CE24AB418E4F5C40091D406 /* GAIAppDelegate.m */,
-				2CE24AB618E4F5C40091D406 /* Main.storyboard */,
 				2CE24AB918E4F5C40091D406 /* GAIMasterViewController.h */,
 				2CE24ABA18E4F5C40091D406 /* GAIMasterViewController.m */,
 				2CE24ABC18E4F5C40091D406 /* GAIDetailViewController.h */,
@@ -313,6 +313,7 @@
 				2CE24AB718E4F5C40091D406 /* Base */,
 			);
 			name = Main.storyboard;
+			path = "Angel Ed";
 			sourceTree = "<group>";
 		};
 		2CE24ACF18E4F5C40091D406 /* InfoPlist.strings */ = {

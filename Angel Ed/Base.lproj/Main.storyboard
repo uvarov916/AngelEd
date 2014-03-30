@@ -154,7 +154,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="661-1U-VTb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="IjP-41-bzq">
+                    <tabBar key="tabBar" contentMode="scaleToFill" selectionIndicatorImage="tabBarSelectedBackground" id="IjP-41-bzq">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -195,7 +195,7 @@
         <scene sceneID="vPb-JK-Y2d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SUb-mO-jAy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="vaN-Ua-wcB"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="vaN-Ua-wcB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QcJ-bG-coW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -213,8 +213,9 @@
     </scenes>
     <resources>
         <image name="posts" width="25" height="25"/>
+        <image name="profile" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
-        <image name="user" width="25" height="25"/>
+        <image name="tabBarSelectedBackground" width="107" height="49"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
