@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6912D3FC-F609-4A87-A5FF-A84045BD5B4C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Angel Ed</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DA101933-A72C-42DD-AE3D-3ADFAAAB1F47</key>
+		<string>https://github.com/uvarovis/AngelEd.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Angel Ed.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DA101933-A72C-42DD-AE3D-3ADFAAAB1F47</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/uvarovis/AngelEd.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DA101933-A72C-42DD-AE3D-3ADFAAAB1F47</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DA101933-A72C-42DD-AE3D-3ADFAAAB1F47</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Angel Ed</string>
+		</dict>
+	</array>
+</dict>
+</plist>

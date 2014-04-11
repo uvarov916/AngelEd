@@ -73,10 +73,12 @@
     
     UITabBarItem *tabPosts = [tabBar.items objectAtIndex:0];
     UITabBarItem *tabProfile = [tabBar.items objectAtIndex:1];
-    UITabBarItem *tabSettings = [tabBar.items objectAtIndex:2];
+    UITabBarItem *tabStats = [tabBar.items objectAtIndex:2];
+    UITabBarItem *tabSettings = [tabBar.items objectAtIndex:3];
 
     tabPosts.image = [[UIImage imageNamed:@"posts"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     tabProfile.image = [[UIImage imageNamed:@"profile"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    tabStats.image = [[UIImage imageNamed:@"stats"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     tabSettings.image = [[UIImage imageNamed:@"settings"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
 }
