@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C201AB818F91D95008B4F31 /* PostsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C201AB718F91D95008B4F31 /* PostsTableCell.xib */; };
+		2C201ABB18F92AAC008B4F31 /* PostsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C201ABA18F92AAC008B4F31 /* PostsTableCell.m */; };
 		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
 		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
 		2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ADF918EFEAD500886313 /* SettingsViewController.m */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		2C201AB718F91D95008B4F31 /* PostsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostsTableCell.xib; sourceTree = "<group>"; };
+		2C201AB918F92AAC008B4F31 /* PostsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsTableCell.h; sourceTree = "<group>"; };
+		2C201ABA18F92AAC008B4F31 /* PostsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsTableCell.m; sourceTree = "<group>"; };
 		2C58931518E7A88400E392B6 /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
 		2C58931618E7A88400E392B6 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
 		2C58932118E7C08F00E392B6 /* MPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextView.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				2C201AB718F91D95008B4F31 /* PostsTableCell.xib */,
+				2C201AB918F92AAC008B4F31 /* PostsTableCell.h */,
+				2C201ABA18F92AAC008B4F31 /* PostsTableCell.m */,
 			);
 			name = TableCell;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				2CE24ABB18E4F5C40091D406 /* GAIMasterViewController.m in Sources */,
 				2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */,
 				2CE24AB118E4F5C40091D406 /* main.m in Sources */,
+				2C201ABB18F92AAC008B4F31 /* PostsTableCell.m in Sources */,
 				2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */,
 				2CE24ABE18E4F5C40091D406 /* GAIDetailViewController.m in Sources */,
 				2CE24ADE18E4F8E30091D406 /* Posts.m in Sources */,

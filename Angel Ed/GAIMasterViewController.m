@@ -10,6 +10,7 @@
 
 #import "GAIDetailViewController.h"
 #import "Posts.h"
+#import "PostsTableCell.h"
 
 @interface GAIMasterViewController () {
     NSMutableArray *_objects;
