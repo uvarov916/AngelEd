@@ -262,11 +262,11 @@
             </objects>
             <point key="canvasLocation" x="524" y="-609"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Stats-->
         <scene sceneID="Bhx-on-uHL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3hL-GL-tNo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="stats" id="vVm-P1-wr2"/>
+                    <tabBarItem key="tabBarItem" title="Stats" image="stats" id="vVm-P1-wr2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hHa-5E-r83">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -287,7 +287,7 @@
         <image name="profile" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
         <image name="stats" width="25" height="25"/>
-        <image name="tabBarSelectedBackground" width="107" height="49"/>
+        <image name="tabBarSelectedBackground" width="80" height="49"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
