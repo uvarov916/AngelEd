@@ -9,8 +9,8 @@
             <objects>
                 <viewController id="g1q-fo-fyH" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Bn9-9k-Qmx"/>
-                        <viewControllerLayoutGuide type="bottom" id="bEF-DO-ScS"/>
+                        <viewControllerLayoutGuide type="top" id="vif-8G-LfY"/>
+                        <viewControllerLayoutGuide type="bottom" id="I5f-aa-5Mj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6D2-0s-Qjr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -44,8 +44,8 @@
             <objects>
                 <viewController id="qqu-oD-PFE" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="u1U-vl-YNn"/>
-                        <viewControllerLayoutGuide type="bottom" id="aGA-SX-OOw"/>
+                        <viewControllerLayoutGuide type="top" id="8X7-0p-Eyw"/>
+                        <viewControllerLayoutGuide type="bottom" id="BOa-j2-L2q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U6E-G6-hXZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -131,8 +131,8 @@
             <objects>
                 <viewController title="Detail" id="Ah7-4n-0Wa" customClass="GAIDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
-                        <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
+                        <viewControllerLayoutGuide type="top" id="pFA-Wk-JWd"/>
+                        <viewControllerLayoutGuide type="bottom" id="M77-8q-dMO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -206,8 +206,8 @@
             <objects>
                 <viewController id="rqj-77-kMO" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xOX-l9-rNT"/>
-                        <viewControllerLayoutGuide type="bottom" id="dsc-ND-3rz"/>
+                        <viewControllerLayoutGuide type="top" id="0nc-zW-ZYy"/>
+                        <viewControllerLayoutGuide type="bottom" id="sHJ-Kq-0a1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gwu-68-EEB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

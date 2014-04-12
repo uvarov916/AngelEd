@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C201AB818F91D95008B4F31 /* PostsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C201AB718F91D95008B4F31 /* PostsTableCell.xib */; };
 		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
 		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
 		2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ADF918EFEAD500886313 /* SettingsViewController.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C201AB718F91D95008B4F31 /* PostsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostsTableCell.xib; sourceTree = "<group>"; };
 		2C58931518E7A88400E392B6 /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
 		2C58931618E7A88400E392B6 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
 		2C58932118E7C08F00E392B6 /* MPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextView.h; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C201AB618F91D2E008B4F31 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C201AB718F91D95008B4F31 /* PostsTableCell.xib */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
 		2CE24A9818E4F5C40091D406 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 		2CE24AAA18E4F5C40091D406 /* Angel Ed */ = {
 			isa = PBXGroup;
 			children = (
+				2C201AB618F91D2E008B4F31 /* TableCell */,
 				2CE24AB318E4F5C40091D406 /* GAIAppDelegate.h */,
 				2CE24AB418E4F5C40091D406 /* GAIAppDelegate.m */,
 				2CE24AB918E4F5C40091D406 /* GAIMasterViewController.h */,
@@ -254,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C201AB818F91D95008B4F31 /* PostsTableCell.xib in Resources */,
 				2CE24AC018E4F5C40091D406 /* Images.xcassets in Resources */,
 				2CE24AAF18E4F5C40091D406 /* InfoPlist.strings in Resources */,
 				2CE24AB818E4F5C40091D406 /* Main.storyboard in Resources */,
