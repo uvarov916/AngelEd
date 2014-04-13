@@ -3,7 +3,6 @@ This is the iOS application created for Angel Ed.
 To-do:
 - Addins points counting
 - Changing styles of page for adding new posts
-- Changing styles of table view with posts - displaying date
 - Adding profile and all corresponding pages
 - Adding settings page and all corresponsing pages
 - Adding stats page
