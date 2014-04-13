@@ -91,6 +91,10 @@
     NSDate *object = _objects[indexPath.row];
     postListCell.title.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostTitle ];
     postListCell.text.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostText ];
+    postListCell.month.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostMonth ];
+    postListCell.date.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostDate ];
+    postListCell.time.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostTime ];
+    
     
     return cell;
 }

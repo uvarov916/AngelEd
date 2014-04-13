@@ -11,6 +11,9 @@
 #define kDefaultText @""
 #define kDefaultTitle @""
 #define kDefaultCategory @""
+#define kDefaultTime @"default"
+#define kDefaultMonth @"default"
+#define kDefaultDate @"default"
 
 #define kCategoryPlaceholder @"Category"
 #define kTextPlaceholder @"Your post"
@@ -21,6 +24,9 @@
 #define kPostCategory @"category"
 #define kPostTitle @"title"
 #define kPostText @"text"
+#define kPostTime @"time"
+#define kPostDate @"date"
+#define kPostMonth @"month"
 
 #define kCategoryCommunity @"community"
 #define kCategoryNetworking  @"networking"

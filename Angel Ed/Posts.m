@@ -22,6 +22,12 @@ static NSString *currentKey;
     return allPosts;
 }
 
+
+
+
+
+
+
 // Getting a dictionary for a specific post
 +(NSMutableDictionary *)getPostDataForKey:(NSString *)key {
     
@@ -34,6 +40,11 @@ static NSString *currentKey;
     [post setObject:kDefaultCategory forKey:kPostCategory];
     [post setObject:kDefaultText forKey:kPostText];
     
+    // Setting up post time
+    [post setObject:kDefaultDate forKey:kPostDate];
+    [post setObject:kDefaultMonth forKey:kPostMonth];
+    [post setObject:kDefaultTime forKey:kPostTime];
+    
     if ([allPosts objectForKey:key] == nil) {
         [allPosts setObject:[[NSMutableDictionary alloc] initWithDictionary:post] forKey:key];
     }
@@ -45,6 +56,9 @@ static NSString *currentKey;
 }
 
 
+
+
+
 // Current key
 +(void)setCurrentKey:(NSString *)key {
     currentKey = key;
@@ -52,6 +66,8 @@ static NSString *currentKey;
 +(NSString *)getCurrentKey {
     return currentKey;
 }
+
+
 
 
 
@@ -65,6 +81,9 @@ static NSString *currentKey;
 }
 
 
+
+
+
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategory:(NSString *)category forKey:(NSString *)key {
     
     if ([allPosts objectForKey:key] == nil) {
@@ -75,6 +94,39 @@ static NSString *currentKey;
     [newDictionary setObject:title forKey:kPostTitle];
     [newDictionary setObject:category forKey:kPostCategory];
     [newDictionary setObject:text forKey:kPostText];
+    
+    NSLog(@"Post time: %@", [newDictionary objectForKey:kPostTime]);
+    
+    // Some new code
+    if ([newDictionary objectForKey:kPostTime] == nil) {
+        
+        NSLog(@"Inside if statement");
+        NSDate *now = [NSDate date];
+        NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+        NSString *newDateString;
+        NSString *newTimeString;
+        NSString *newMonthString;
+        
+        // Creating time string
+        [outputFormatter setDateFormat:@"HH:mm"];
+        newTimeString = [outputFormatter stringFromDate:now];
+        NSLog(@"newTimeString %@", newTimeString);
+        
+        // Creating date string
+        [outputFormatter setDateFormat:@"dd"];
+        newDateString = [outputFormatter stringFromDate:now];
+        NSLog(@"newDateString %@", newDateString);
+        
+        // Creating month string
+        [outputFormatter setDateFormat:@"MM"];
+        newMonthString = [outputFormatter stringFromDate:now];
+        NSLog(@"newMonthString %@", newMonthString);
+        
+        
+        [newDictionary setObject:newDateString forKey:kPostDate];
+        [newDictionary setObject:newMonthString forKey:kPostMonth];
+        [newDictionary setObject:newTimeString forKey:kPostTime];
+    }
     
     [allPosts setObject:newDictionary forKey:key];
 }
