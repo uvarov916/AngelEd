@@ -1,14 +1,14 @@
 //
-//  PostsTableCell.m
+//  PostListCell.m
 //  Angel Ed
 //
-//  Created by Иван on 4/12/14.
+//  Created by Иван on 4/13/14.
 //  Copyright (c) 2014 Global App Initiative. All rights reserved.
 //
 
-#import "PostsTableCell.h"
+#import "PostListCell.h"
 
-@implementation PostsTableCell
+@implementation PostListCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

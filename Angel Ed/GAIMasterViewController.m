@@ -10,7 +10,7 @@
 
 #import "GAIDetailViewController.h"
 #import "Posts.h"
-#import "PostsTableCell.h"
+#import "PostListCell.h"
 
 @interface GAIMasterViewController () {
     NSMutableArray *_objects;
@@ -86,10 +86,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostListCell" forIndexPath:indexPath];
+    PostListCell *postListCell = (PostListCell *)cell;
     NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostTitle ];
+    postListCell.title.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostTitle ];
+    postListCell.text.text = [[[Posts getAllPosts] objectForKey:[object description]] objectForKey:kPostText ];
+    
     return cell;
 }
 
