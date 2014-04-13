@@ -81,7 +81,48 @@ static NSString *currentKey;
 }
 
 
-
++(NSString *)convertMonthToText:(NSString *)num {
+    
+    if ([num isEqualToString:@"01"]) {
+        return @"Jan";
+    }
+    else if ([num isEqualToString:@"02"]) {
+        return @"Feb";
+    }
+    else if ([num isEqualToString:@"03"]) {
+        return @"Mar";
+    }
+    else if ([num isEqualToString:@"04"]) {
+        return @"Apr";
+    }
+    else if ([num isEqualToString:@"05"]) {
+        return @"May";
+    }
+    else if ([num isEqualToString:@"06"]) {
+        return @"Jun";
+    }
+    else if ([num isEqualToString:@"07"]) {
+        return @"Jul";
+    }
+    else if ([num isEqualToString:@"08"]) {
+        return @"Aug";
+    }
+    else if ([num isEqualToString:@"09"]) {
+        return @"Sep";
+    }
+    else if ([num isEqualToString:@"10"]) {
+        return @"Oct";
+    }
+    else if ([num isEqualToString:@"11"]) {
+        return @"Nov";
+    }
+    else if ([num isEqualToString:@"12"]) {
+        return @"Dec";
+    }
+    else {
+        return @"None";
+    }
+}
 
 
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategory:(NSString *)category forKey:(NSString *)key {
@@ -119,7 +160,7 @@ static NSString *currentKey;
         
         // Creating month string
         [outputFormatter setDateFormat:@"MM"];
-        newMonthString = [outputFormatter stringFromDate:now];
+        newMonthString = [Posts convertMonthToText:[outputFormatter stringFromDate:now] ];
         NSLog(@"newMonthString %@", newMonthString);
         
         

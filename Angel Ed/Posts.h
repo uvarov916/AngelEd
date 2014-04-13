@@ -37,6 +37,8 @@
 
 @interface Posts : NSObject
 
++(NSString *)convertMonthToText:(NSString *)num;
+
 // Getting data
 +(NSMutableDictionary *)getAllPosts;
 
