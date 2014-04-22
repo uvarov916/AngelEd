@@ -32,6 +32,8 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 
@@ -39,6 +41,30 @@
     [super viewWillAppear:animated];
     [self makeObjects];
     [self.tableView reloadData];
+    
+    [self updateBackground];
+}
+
+-(void)updateBackground {
+    int sections = [self.tableView numberOfSections];
+    BOOL hasRows = NO;
+    for (int i = 0; i < sections; i++)
+        hasRows = ([self.tableView numberOfRowsInSection:i] > 0) ? YES : NO;
+    
+    if (sections == 0 || hasRows == NO)
+    {
+        UIImage *image = [UIImage imageNamed:@"emptyTableView"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        
+        // Add image view on top of table view
+        [self.tableView addSubview:imageView];
+        
+        // Set the background view of the table view
+        self.tableView.backgroundView = imageView;
+    }
+    else {
+        self.tableView.backgroundView = nil;
+    }
 }
 
 
@@ -112,6 +138,7 @@
         [Posts savePosts];
         [_objects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self updateBackground];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
