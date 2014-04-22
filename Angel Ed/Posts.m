@@ -132,9 +132,26 @@ static NSString *currentKey;
     }
     
     NSMutableDictionary *newDictionary = [allPosts objectForKey:key];
-    [newDictionary setObject:title forKey:kPostTitle];
-    [newDictionary setObject:category forKey:kPostCategory];
-    [newDictionary setObject:text forKey:kPostText];
+    if (title == nil) {
+        [newDictionary setObject:kDefaultTitle forKey:kPostTitle];
+    }
+    else {
+        [newDictionary setObject:title forKey:kPostTitle];
+    }
+    
+    if (text == nil) {
+        [newDictionary setObject:kDefaultText forKey:kPostText];
+    }
+    else {
+        [newDictionary setObject:text forKey:kPostText];
+    }
+    
+    if (category == nil) {
+        [newDictionary setObject:kDefaultCategory forKey:kPostCategory];
+    }
+    else {
+        [newDictionary setObject:category forKey:kPostCategory];
+    }
     
     NSLog(@"Post time: %@", [newDictionary objectForKey:kPostTime]);
     
@@ -174,6 +191,14 @@ static NSString *currentKey;
 
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategoryforCurrentKey:(NSString *)category {
     [Posts setTitle:title setText:text setCategory:category forKey:currentKey];
+}
+
++(void)setCategoryforCurrentKey:(NSString *)category {
+    NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
+    NSString *currentTitle = [post objectForKey:kPostTitle];
+    NSString *currentText = [post objectForKey:kPostText];
+    
+    [Posts setTitle:currentTitle setText:currentText setCategory:category forKey:currentKey];
 }
 
 

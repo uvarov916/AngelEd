@@ -65,12 +65,38 @@
     ((MPTextView *)textView).placeholderText = kTextPlaceholder;
     
     // To disable editing
-    // self.titleView.editable = NO;
+    self.categoryView.editable = NO;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
+    NSString *currentTitle = [post objectForKey:kPostTitle];
+    NSString *currentCategory = [post objectForKey:kPostCategory];
+    NSString *currentText = [post objectForKey:kPostText];
+    
+    if (![currentTitle isEqualToString:@""]) {
+        self.titleView.text = currentTitle;
+    }
+    else {
+        self.titleView.text = kDefaultTitle;
+    }
+    if (![currentCategory isEqualToString:@""]) {
+        self.categoryView.text = currentCategory;
+    }
+    else {
+        self.categoryView.text = kDefaultCategory;
+    }
+    if (![currentText isEqualToString:@""]) {
+        self.textView.text = currentText;
+    }
+    else {
+        self.textView.text = kDefaultText;
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     
-    if (![self.textView.text isEqualToString:@""]) {
+    //if (![self.textView.text isEqualToString:@""]) {
         NSString *currentTitle = kDefaultTitle;
         NSString *currentCategory = kDefaultCategory;
         if (![self.titleView.text isEqualToString:@""]) {
@@ -80,10 +106,10 @@
             currentCategory = self.categoryView.text;
         }
         [Posts setTitle:currentTitle setText:self.textView.text setCategoryforCurrentKey:currentCategory];
-    }
-    else {
-        [Posts removePostForKey:[Posts getCurrentKey]];
-    }
+//    }
+//    else {
+//        [Posts removePostForKey:[Posts getCurrentKey]];
+//    }
     
     
     [Posts savePosts];

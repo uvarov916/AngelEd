@@ -10,7 +10,7 @@
 
 #define kDefaultText @""
 #define kDefaultTitle @""
-#define kDefaultCategory @""
+#define kDefaultCategory @"uncategorized"
 #define kDefaultTime @"default"
 #define kDefaultMonth @"default"
 #define kDefaultDate @"default"
@@ -28,6 +28,7 @@
 #define kPostDate @"date"
 #define kPostMonth @"month"
 
+#define kCategoryDefault @"uncategorized"
 #define kCategoryCommunity @"community"
 #define kCategoryNetworking  @"networking"
 #define kCategoryProfessional @"professional"
@@ -56,6 +57,7 @@
 
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategory:(NSString *)category forKey:(NSString *)key;
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategoryforCurrentKey:(NSString *)category;
++(void)setCategoryforCurrentKey:(NSString *)category;
 
 
 @end
