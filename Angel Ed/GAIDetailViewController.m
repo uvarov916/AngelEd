@@ -107,7 +107,12 @@
 
 -(void)viewWillDisappear:(BOOL)animated {
     
-    [self saveData];
+    if (!([self.titleView.text isEqualToString:@""] && [self.textView.text isEqualToString:@""])) {
+        [self saveData];
+    }
+    else {
+        [Posts removePostForKey:[Posts getCurrentKey]];
+    }
 }
 
 -(void)saveData {
@@ -135,6 +140,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    // self.automaticallyAdjustsScrollViewInsets = NO;
 
     
 }
