@@ -13,6 +13,7 @@ Extra functionality:
 - Images for empty pages [link](http://cdn.pttrns.com/pttrns/2536/original/IMG_4643.PNG) or [link](http://cdn.pttrns.com/pttrns/2043/original/IMG_2901.PNG)
 - Change title of individual post page
 - Multipage post adding
+- Group cells in a table view by month
 
 Known bugs:
 - Text view in post scrolls by itself

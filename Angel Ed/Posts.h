@@ -17,7 +17,7 @@
 
 #define kCategoryPlaceholder @"Category"
 #define kTextPlaceholder @"Your post"
-#define kTitlePlaceholder @"Title"
+#define kTitlePlaceholder @"TITLE"
 
 #define kAllPosts @"posts"
 
