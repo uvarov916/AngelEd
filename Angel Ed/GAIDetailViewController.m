@@ -34,6 +34,14 @@
     }
 }
 
+
+-(void)customBtnPressed {
+    
+    [self saveData];
+    [self.view endEditing:YES];
+    
+}
+
 - (void)configureView
 {
     NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
@@ -66,6 +74,9 @@
     
     // To disable editing
     self.categoryView.editable = NO;
+    
+    UIBarButtonItem *customBtn=[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(customBtnPressed)];
+    [self.navigationItem setRightBarButtonItem:customBtn];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -96,20 +107,23 @@
 
 -(void)viewWillDisappear:(BOOL)animated {
     
-    //if (![self.textView.text isEqualToString:@""]) {
-        NSString *currentTitle = kDefaultTitle;
-        NSString *currentCategory = kDefaultCategory;
-        if (![self.titleView.text isEqualToString:@""]) {
-            currentTitle = self.titleView.text;
-        }
-        if (![self.categoryView.text isEqualToString:@""]) {
-            currentCategory = self.categoryView.text;
-        }
-        [Posts setTitle:currentTitle setText:self.textView.text setCategoryforCurrentKey:currentCategory];
-//    }
-//    else {
-//        [Posts removePostForKey:[Posts getCurrentKey]];
-//    }
+    [self saveData];
+}
+
+-(void)saveData {
+    NSString *currentTitle = kDefaultTitle;
+    NSString *currentCategory = kDefaultCategory;
+    NSString *currentText = kDefaultText;
+    if (![self.titleView.text isEqualToString:@""]) {
+        currentTitle = self.titleView.text;
+    }
+    if (![self.categoryView.text isEqualToString:@""]) {
+        currentCategory = self.categoryView.text;
+    }
+    if (![self.textView.text isEqualToString:@""]) {
+        currentText = self.textView.text;
+    }
+    [Posts setTitle:currentTitle setText:self.textView.text setCategoryforCurrentKey:currentCategory];
     
     
     [Posts savePosts];
