@@ -11,6 +11,8 @@ To-do:
 Extra functionality:
 - Walkthrough http://pttrns.com/categories/16-walkthroughs
 - Images for empty pages [link](http://cdn.pttrns.com/pttrns/2536/original/IMG_4643.PNG) or [link](http://cdn.pttrns.com/pttrns/2043/original/IMG_2901.PNG)
+- Change title of individual post page
+- Multipage post adding
 
 Known bugs:
 - Text view in post scrolls by itself
