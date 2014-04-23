@@ -46,8 +46,8 @@
 {
     NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
     NSString *currentTitle = [post objectForKey:kPostTitle];
-    NSString *currentCategory = [post objectForKey:kPostCategory];
     NSString *currentText = [post objectForKey:kPostText];
+    NSString *currentCategory = [post objectForKey:kPostCategory];
     
     if (![currentTitle isEqualToString:@""]) {
         self.titleView.text = currentTitle;
@@ -68,12 +68,15 @@
         self.textView.text = kDefaultText;
     }
     
-    ((MPTextView *)titleView).placeholderText = kTitlePlaceholder;
-    ((MPTextView *)categoryView).placeholderText = kCategoryPlaceholder;
-    ((MPTextView *)textView).placeholderText = kTextPlaceholder;
+    //((MPTextView *)titleView).placeholderText = kTitlePlaceholder;
+    //((MPTextView *)categoryView).placeholderText = kCategoryPlaceholder;
+    //((MPTextView *)textView).placeholderText = kTextPlaceholder;
     
     // To disable editing
     self.categoryView.editable = NO;
+    self.textView.editable = NO;
+    self.titleView.editable = NO;
+    
     
 //    UIBarButtonItem *customBtn=[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(customBtnPressed)];
 //    [self.navigationItem setRightBarButtonItem:customBtn];
@@ -142,7 +145,14 @@
     [self configureView];
     
     // self.automaticallyAdjustsScrollViewInsets = NO;
-
+    NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
+    NSString *currentTitle = [post objectForKey:kPostTitle];
+    NSString *currentText = [post objectForKey:kPostText];
+    
+    if ([currentTitle isEqualToString:kDefaultTitle] && [currentText isEqualToString:kDefaultText]) {
+        NSLog(@"Here");
+        [self performSegueWithIdentifier:@"Edit" sender:self];
+    }
     
 }
 

@@ -185,7 +185,7 @@
                     <navigationItem key="navigationItem" title="Post" id="cra-N8-TIN">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="3wO-LV-QIh">
                             <connections>
-                                <segue destination="UWz-Ek-3ue" kind="modal" id="sdW-AR-ATm"/>
+                                <segue destination="UWz-Ek-3ue" kind="modal" identifier="Edit" id="sdW-AR-ATm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
