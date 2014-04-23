@@ -35,12 +35,12 @@
 }
 
 
--(void)customBtnPressed {
-    
-    [self saveData];
-    [self.view endEditing:YES];
-    
-}
+//-(void)customBtnPressed {
+//    
+//    [self saveData];
+//    [self.view endEditing:YES];
+//    
+//}
 
 - (void)configureView
 {
@@ -75,8 +75,8 @@
     // To disable editing
     self.categoryView.editable = NO;
     
-    UIBarButtonItem *customBtn=[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(customBtnPressed)];
-    [self.navigationItem setRightBarButtonItem:customBtn];
+//    UIBarButtonItem *customBtn=[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(customBtnPressed)];
+//    [self.navigationItem setRightBarButtonItem:customBtn];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

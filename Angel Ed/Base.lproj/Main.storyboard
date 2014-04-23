@@ -172,16 +172,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aOu-Dc-U2x">
-                                <rect key="frame" x="185" y="117" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="change category">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="FnL-ii-t7f" kind="modal" id="6DO-Ed-BhZ"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" id="XfA-YW-qV6" customClass="MPTextView">
                                 <rect key="frame" x="20" y="155" width="280" height="363"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +182,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Post" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Post" id="cra-N8-TIN">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="3wO-LV-QIh">
+                            <connections>
+                                <segue destination="UWz-Ek-3ue" kind="modal" id="sdW-AR-ATm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoryView" destination="zrY-Ja-Z8S" id="oBZ-xK-tSH"/>
                         <outlet property="textView" destination="XfA-YW-qV6" id="Reh-sB-7aN"/>
@@ -202,6 +198,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1369" y="30"/>
+        </scene>
+        <!--Edit Text View Controller - New Post-->
+        <scene sceneID="8Ww-8b-9hw">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="oGe-zr-owo" customClass="editTextViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5f4-q0-rZo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nG7-bh-kgR">
+                                <rect key="frame" x="0.0" y="65" width="320" height="283"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Post" id="b4q-pg-GKv">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9hd-em-ZWJ">
+                            <connections>
+                                <action selector="btnCancel:" destination="oGe-zr-owo" id="3Uc-2x-8Zb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="xlc-Ij-h0k">
+                            <connections>
+                                <segue destination="bhF-bT-ZQB" kind="push" id="KJS-Tp-DN9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="postView" destination="nG7-bh-kgR" id="J5Z-PO-bfs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnJ-Km-t7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2400" y="76"/>
+        </scene>
+        <!--Edit Title View Controller - New Post-->
+        <scene sceneID="hwq-Dt-glF">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bhF-bT-ZQB" customClass="editTitleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3k-Ny-3Qe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Title" id="Zkd-ml-y3c">
+                                <rect key="frame" x="20" y="83" width="280" height="77"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Efo-oH-5BB">
+                                <rect key="frame" x="20" y="178" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AfL-Bj-MiZ">
+                                <rect key="frame" x="183" y="174" width="117" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose category">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FnL-ii-t7f" kind="modal" id="1aa-lO-z40"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Post" id="pbD-tP-ANF">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="DT9-yy-pX5">
+                            <connections>
+                                <action selector="btnDone:" destination="bhF-bT-ZQB" id="Auo-UB-ePa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="categoryLabel" destination="Efo-oH-5BB" id="h52-MM-bRY"/>
+                        <outlet property="titleView" destination="Zkd-ml-y3c" id="FDb-m9-Hgj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4e7-UO-T7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2772" y="76"/>
         </scene>
         <!--Category Picker View Controller - Choose Category-->
         <scene sceneID="vYp-vT-yH1">
@@ -306,7 +392,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d90-6n-HyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="58"/>
+            <point key="canvasLocation" x="2772" y="752"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vkQ-Qq-wHT">
@@ -404,6 +490,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHr-Dn-06e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="1396"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8c0-aq-Tfb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UWz-Ek-3ue" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="umL-xB-oAU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oGe-zr-owo" kind="relationship" relationship="rootViewController" id="ZRm-dQ-evQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="554-oT-1qT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="76"/>
         </scene>
     </scenes>
     <resources>

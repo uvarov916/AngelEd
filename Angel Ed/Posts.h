@@ -58,6 +58,8 @@
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategory:(NSString *)category forKey:(NSString *)key;
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategoryforCurrentKey:(NSString *)category;
 +(void)setCategoryforCurrentKey:(NSString *)category;
++(void)setTextforCurrentKey:(NSString *)text;
++(void)setTitleforCurrentKey:(NSString *)title;
 
 
 @end

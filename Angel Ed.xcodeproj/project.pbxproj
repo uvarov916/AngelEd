@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C201ABE18FA94DC008B4F31 /* PostListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C201ABD18FA94DC008B4F31 /* PostListCell.m */; };
+		2C2BD2E61907999D0017CF03 /* editTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BD2E51907999D0017CF03 /* editTitleViewController.m */; };
+		2C2BD2E9190799AF0017CF03 /* editTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BD2E8190799AF0017CF03 /* editTextViewController.m */; };
 		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
 		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
 		2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ADF918EFEAD500886313 /* SettingsViewController.m */; };
@@ -43,6 +45,10 @@
 /* Begin PBXFileReference section */
 		2C201ABC18FA94DC008B4F31 /* PostListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListCell.h; sourceTree = "<group>"; };
 		2C201ABD18FA94DC008B4F31 /* PostListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListCell.m; sourceTree = "<group>"; };
+		2C2BD2E41907999D0017CF03 /* editTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editTitleViewController.h; sourceTree = "<group>"; };
+		2C2BD2E51907999D0017CF03 /* editTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editTitleViewController.m; sourceTree = "<group>"; };
+		2C2BD2E7190799AF0017CF03 /* editTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editTextViewController.h; sourceTree = "<group>"; };
+		2C2BD2E8190799AF0017CF03 /* editTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editTextViewController.m; sourceTree = "<group>"; };
 		2C58931518E7A88400E392B6 /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
 		2C58931618E7A88400E392B6 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
 		2C58932118E7C08F00E392B6 /* MPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextView.h; sourceTree = "<group>"; };
@@ -154,6 +160,10 @@
 				2C66ADF918EFEAD500886313 /* SettingsViewController.m */,
 				2CDA51A8190628440074F7CB /* CategoryPickerViewController.h */,
 				2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */,
+				2C2BD2E41907999D0017CF03 /* editTitleViewController.h */,
+				2C2BD2E51907999D0017CF03 /* editTitleViewController.m */,
+				2C2BD2E7190799AF0017CF03 /* editTextViewController.h */,
+				2C2BD2E8190799AF0017CF03 /* editTextViewController.m */,
 			);
 			path = "Angel Ed";
 			sourceTree = "<group>";
@@ -286,11 +296,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CDA51AA190628440074F7CB /* CategoryPickerViewController.m in Sources */,
+				2C2BD2E9190799AF0017CF03 /* editTextViewController.m in Sources */,
 				2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */,
 				2CE24AB518E4F5C40091D406 /* GAIAppDelegate.m in Sources */,
 				2CE24ABB18E4F5C40091D406 /* GAIMasterViewController.m in Sources */,
 				2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */,
 				2CE24AB118E4F5C40091D406 /* main.m in Sources */,
+				2C2BD2E61907999D0017CF03 /* editTitleViewController.m in Sources */,
 				2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */,
 				2C201ABE18FA94DC008B4F31 /* PostListCell.m in Sources */,
 				2CE24ABE18E4F5C40091D406 /* GAIDetailViewController.m in Sources */,

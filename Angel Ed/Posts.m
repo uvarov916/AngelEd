@@ -201,5 +201,21 @@ static NSString *currentKey;
     [Posts setTitle:currentTitle setText:currentText setCategory:category forKey:currentKey];
 }
 
++(void)setTextforCurrentKey:(NSString *)text {
+    NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
+    NSString *currentTitle = [post objectForKey:kPostTitle];
+    NSString *currentCategory = [post objectForKey:kPostCategory];
+    
+    [Posts setTitle:currentTitle setText:text setCategory:currentCategory forKey:currentKey];
+}
+
++(void)setTitleforCurrentKey:(NSString *)title {
+    NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
+    NSString *currentCategory = [post objectForKey:kPostCategory];
+    NSString *currentText = [post objectForKey:kPostText];
+    
+    [Posts setTitle:title setText:currentText setCategory:currentCategory forKey:currentKey];
+}
+
 
 @end
