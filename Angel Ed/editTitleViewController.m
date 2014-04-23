@@ -16,6 +16,8 @@
 
 @implementation editTitleViewController
 
+@synthesize titleView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +31,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ((MPTextView *)titleView).placeholderText = kTitlePlaceholder;
 }
 
 - (void)didReceiveMemoryWarning

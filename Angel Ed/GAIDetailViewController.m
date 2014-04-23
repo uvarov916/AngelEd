@@ -73,9 +73,9 @@
     //((MPTextView *)textView).placeholderText = kTextPlaceholder;
     
     // To disable editing
-    self.categoryView.editable = NO;
-    self.textView.editable = NO;
-    self.titleView.editable = NO;
+//    self.categoryView.editable = NO;
+//    self.textView.editable = NO;
+//    self.titleView.editable = NO;
     
     
 //    UIBarButtonItem *customBtn=[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(customBtnPressed)];

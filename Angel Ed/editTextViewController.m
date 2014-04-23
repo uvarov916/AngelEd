@@ -58,7 +58,7 @@
     
     self.postView.text = currentText;
     
-    // ((MPTextView *)postView).placeholderText = kTextPlaceholder;
+    ((MPTextView *)postView).placeholderText = kTextPlaceholder;
 }
 
 
