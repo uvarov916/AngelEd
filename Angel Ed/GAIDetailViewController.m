@@ -81,6 +81,14 @@
     
 //    UIBarButtonItem *customBtn=[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(customBtnPressed)];
 //    [self.navigationItem setRightBarButtonItem:customBtn];
+    
+    
+    self.textView.layoutManager.delegate = self;
+}
+
+- (CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(CGRect)rect
+{
+    return 5; // For really wide spacing; pick your own value
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -108,12 +116,13 @@
         self.textView.text = kDefaultText;
     }
     
+    
     // Resizing textView
     CGRect rect = self.textView.frame;
     rect.size.height = self.textView.contentSize.height;
     self.textView.frame = rect;
     [self.textView sizeToFit];
-
+    
     
     float fscrview = textView.frame.origin.y + textView.frame.size.height + 20;
     self.postScrollView.contentSize=CGSizeMake(320, fscrview);
