@@ -13,6 +13,7 @@
 		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
 		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
 		2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ADF918EFEAD500886313 /* SettingsViewController.m */; };
+		2C7CBF931908FD8100783919 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBF921908FD8100783919 /* StatsViewController.m */; };
 		2CDA51AA190628440074F7CB /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */; };
 		2CE24AA518E4F5C40091D406 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA418E4F5C40091D406 /* Foundation.framework */; };
 		2CE24AA718E4F5C40091D406 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */; };
@@ -55,6 +56,8 @@
 		2C58932218E7C08F00E392B6 /* MPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTextView.m; sourceTree = "<group>"; };
 		2C66ADF818EFEAD500886313 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		2C66ADF918EFEAD500886313 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2C7CBF911908FD8100783919 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		2C7CBF921908FD8100783919 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		2CDA51A8190628440074F7CB /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
 		2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
 		2CE24AA118E4F5C40091D406 /* Angel Ed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Angel Ed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +167,8 @@
 				2C2BD2E51907999D0017CF03 /* editTitleViewController.m */,
 				2C2BD2E7190799AF0017CF03 /* editTextViewController.h */,
 				2C2BD2E8190799AF0017CF03 /* editTextViewController.m */,
+				2C7CBF911908FD8100783919 /* StatsViewController.h */,
+				2C7CBF921908FD8100783919 /* StatsViewController.m */,
 			);
 			path = "Angel Ed";
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				2C2BD2E61907999D0017CF03 /* editTitleViewController.m in Sources */,
 				2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */,
 				2C201ABE18FA94DC008B4F31 /* PostListCell.m in Sources */,
+				2C7CBF931908FD8100783919 /* StatsViewController.m in Sources */,
 				2CE24ABE18E4F5C40091D406 /* GAIDetailViewController.m in Sources */,
 				2CE24ADE18E4F8E30091D406 /* Posts.m in Sources */,
 			);

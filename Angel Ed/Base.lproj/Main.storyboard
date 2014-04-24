@@ -457,10 +457,10 @@
             </objects>
             <point key="canvasLocation" x="25" y="70"/>
         </scene>
-        <!--View Controller - Statistics-->
+        <!--Stats View Controller - Statistics-->
         <scene sceneID="ZYN-cW-NDU">
             <objects>
-                <viewController id="rqj-77-kMO" sceneMemberID="viewController">
+                <viewController id="rqj-77-kMO" customClass="StatsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gwu-68-EEB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
