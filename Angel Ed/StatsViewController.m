@@ -54,7 +54,7 @@
         case 3:
             return UIColorHex(0xF2CB05);
         case 4:
-            return UIColorHex(0xE9F2DF);
+            return UIColorHex(0xFFFFFF)/*UIColorHex(0xE9F2DF)*/;
         default:
             break;
     }
@@ -63,7 +63,7 @@
 
 - (void)createPieChart
 {
-    chart = [[UIView alloc] initWithFrame:CGRectMake(60, 250, 200, 200)];
+    chart = [[UIView alloc] initWithFrame:CGRectMake(60, 100, 200, 200)];
     chart.backgroundColor = [UIColor blackColor];
     chart.layer.cornerRadius = 100;
     [self.view addSubview:chart];
@@ -101,11 +101,11 @@
         start = end;
     }
     
-    // UIView *mask = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
-    // mask.layer.cornerRadius = 60;
-    // mask.center = CGPointMake(100, 100);
-    // mask.backgroundColor = [self color:4];
-    // [chart addSubview:mask];
+    UIView *mask = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    mask.layer.cornerRadius = 25;
+    mask.center = CGPointMake(100, 100);
+    mask.backgroundColor = [self color:4];
+    [chart addSubview:mask];
 }
 
 /*
