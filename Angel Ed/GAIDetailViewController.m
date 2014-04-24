@@ -113,6 +113,10 @@
     rect.size.height = self.textView.contentSize.height;
     self.textView.frame = rect;
     [self.textView sizeToFit];
+
+    
+    float fscrview = textView.frame.origin.y + textView.frame.size.height + 20;
+    self.postScrollView.contentSize=CGSizeMake(320, fscrview);
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
