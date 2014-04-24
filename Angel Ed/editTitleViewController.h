@@ -12,5 +12,6 @@
 - (IBAction)btnDone:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *titleView;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@property (weak, nonatomic) IBOutlet UIButton *btnChooseCategory;
 
 @end

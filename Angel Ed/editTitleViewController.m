@@ -32,6 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     ((MPTextView *)titleView).placeholderText = kTitlePlaceholder;
+    [self.btnChooseCategory setTitleColor:[UIColor colorWithRed:0.212 green:0.631 blue:0.831 alpha:1.0] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
