@@ -44,6 +44,7 @@
 
 - (void)configureView
 {
+    
     NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
     NSString *currentTitle = [post objectForKey:kPostTitle];
     NSString *currentText = [post objectForKey:kPostText];
@@ -56,10 +57,10 @@
         self.titleView.text = kDefaultTitle;
     }
     if (![currentCategory isEqualToString:@""]) {
-        self.categoryView.text = currentCategory;
+        self.categoryView.text = [currentCategory capitalizedString];
     }
     else {
-        self.categoryView.text = kDefaultCategory;
+        self.categoryView.text = [kDefaultCategory capitalizedString];
     }
     if (![currentText isEqualToString:@""]) {
         self.textView.text = currentText;
@@ -95,10 +96,10 @@
         self.titleView.text = kDefaultTitle;
     }
     if (![currentCategory isEqualToString:@""]) {
-        self.categoryView.text = currentCategory;
+        self.categoryView.text = [currentCategory capitalizedString];
     }
     else {
-        self.categoryView.text = kDefaultCategory;
+        self.categoryView.text = [kDefaultCategory capitalizedString];
     }
     if (![currentText isEqualToString:@""]) {
         self.textView.text = currentText;
@@ -106,6 +107,12 @@
     else {
         self.textView.text = kDefaultText;
     }
+    
+    // Resizing textView
+    CGRect rect = self.textView.frame;
+    rect.size.height = self.textView.contentSize.height;
+    self.textView.frame = rect;
+    [self.textView sizeToFit];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
