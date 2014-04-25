@@ -5,6 +5,8 @@ To-do:
 	- Skiping post page when user creates new post
 	- Decreasing tabbar and navbar opacity
 	- Handling empty fields with alerts
+	- Handling done button on keyboard
+	- Handling cancel button on a new post
 - Addins points counting
 - Adding profile and all corresponding pages [possible design option](http://cdn.pttrns.com/pttrns/1937/original/IMG_2859.PNG)
 - Adding settings page and all corresponsing pages [link](http://cdn.pttrns.com/pttrns/2538/original/IMG_4647.PNG)
