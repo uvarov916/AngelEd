@@ -11,4 +11,10 @@
 @interface StatsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (strong, nonatomic) IBOutlet UILabel *networkingLabelDet;
+@property (strong, nonatomic) IBOutlet UILabel *communityLabelDet;
+@property (strong, nonatomic) IBOutlet UILabel *academicLabelDet;
+@property (strong, nonatomic) IBOutlet UILabel *professionalLabelDet;
+@property (strong, nonatomic) IBOutlet UILabel *totalLabel;
+
 @end

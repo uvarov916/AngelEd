@@ -21,6 +21,12 @@
 
 @implementation StatsViewController
 
+@synthesize networkingLabelDet;
+@synthesize academicLabelDet;
+@synthesize communityLabelDet;
+@synthesize professionalLabelDet;
+@synthesize totalLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,15 +36,29 @@
     return self;
 }
 
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
--(void)viewWillAppear:(BOOL)animated {
     [self createPieChart];
     
+    NSMutableDictionary *categories = [Posts getAllCategories];
+    NSNumber *academicPoints = [categories objectForKey:kCategoryAcademic];
+    NSNumber *communityPoints = [categories objectForKey:kCategoryCommunity];
+    NSNumber *professionalPoints = [categories objectForKey:kCategoryProfessional];
+    NSNumber *networkingPoints = [categories objectForKey:kCategoryNetworking];
+    NSInteger totalPoints = [academicPoints integerValue] + [communityPoints integerValue] + [professionalPoints integerValue] + [networkingPoints integerValue];
+    
+    self.networkingLabelDet.text = [networkingPoints stringValue];
+    self.communityLabelDet.text = [communityPoints stringValue];
+    self.academicLabelDet.text = [academicPoints stringValue];
+    self.professionalLabelDet.text = [professionalPoints stringValue];
+    self.totalLabel.text = [[NSNumber numberWithInteger:totalPoints] stringValue];
+    
+}
+
+-(void)viewDidLoad {
+    
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
     UILabel *networkingLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 375, 120, 30)];
         networkingLabel.text = @"Networking";
@@ -46,7 +66,7 @@
         networkingLabel.font = [UIFont systemFontOfSize:22];
         networkingLabel.textAlignment = NSTextAlignmentRight;
     
-    UILabel *networkingLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 404, 120, 21)];
+    networkingLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 404, 120, 21)];
         networkingLabelDet.text = @"367";
         networkingLabelDet.textColor = [UIColor lightGrayColor];
         networkingLabelDet.font = [UIFont systemFontOfSize:17];
@@ -58,7 +78,7 @@
         communityLabel.font = [UIFont systemFontOfSize:22];
         communityLabel.textAlignment = NSTextAlignmentRight;
     
-    UILabel *communityLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 470, 120, 21)];
+    communityLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 470, 120, 21)];
         communityLabelDet.text = @"367";
         communityLabelDet.textColor = [UIColor lightGrayColor];
         communityLabelDet.font = [UIFont systemFontOfSize:17];
@@ -70,7 +90,7 @@
         academicLabel.font = [UIFont systemFontOfSize:22];
         academicLabel.textAlignment = NSTextAlignmentLeft;
     
-    UILabel *academicLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(180, 404, 120, 21)];
+    academicLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(180, 404, 120, 21)];
         academicLabelDet.text = @"367";
         academicLabelDet.textColor = [UIColor lightGrayColor];
         academicLabelDet.font = [UIFont systemFontOfSize:17];
@@ -82,7 +102,7 @@
         professionalLabel.font = [UIFont systemFontOfSize:22];
         professionalLabel.textAlignment = NSTextAlignmentLeft;
     
-    UILabel *professionalLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(180, 470, 120, 21)];
+    professionalLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(180, 470, 120, 21)];
         professionalLabelDet.text = @"367";
         professionalLabelDet.textColor = [UIColor lightGrayColor];
         professionalLabelDet.font = [UIFont systemFontOfSize:17];
@@ -113,10 +133,10 @@
     [self.view addSubview:networkingLabelDet];
     [self.view addSubview:communityLabelDet];
     [self.view addSubview:academicLabelDet];
-    [self.view addSubview:professionalLabelDet]; 
+    [self.view addSubview:professionalLabelDet];
     
     
-    UILabel *totalLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 304, 280, 27)];
+    totalLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 304, 280, 27)];
         totalLabel.text = @"1754";
         totalLabel.textColor = [UIColor darkGrayColor];
         totalLabel.font = [UIFont systemFontOfSize:23];
