@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.emailButton setTitleColor:[UIColor colorWithRed:0.212 green:0.631 blue:0.831 alpha:1.0] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,7 +86,31 @@
     [mc setMessageBody:messageBody isHTML:NO];
     [mc setToRecipients:toRecipents];
     
+    
     // Present mail view controller on screen
-    [self presentViewController:mc animated:YES completion:NULL];
+    // [self presentViewController:mc animated:YES completion:NULL];
+    
+    // Present the email controller.  The delegate will dismiss it.
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
+    float systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (systemVersion < 7.0f) {
+        [self presentViewController:mc animated:YES completion:^{}];
+    }
+    else {
+        // Need a song and dance to get the header bar to show correctly.  (And presentModalViewController is deprecated anyway.)  Note that this code doesn't actually change the email controller's header, but it somehow lets the header below "show through" when it wouldn't otherwise.  (I know -- like many of the iOS 7 fixes this makes no sense.  But it works.  (So far.))
+#warning Sometimes produces console message "Presenting view controllers on detached view controllers is discouraged <XxxxViewController: 0xc658a70>"
+        [self presentViewController:mc animated:YES completion:^{
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+            if (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
+                && [[UIApplication sharedApplication] respondsToSelector:NSSelectorFromString(@"setStatusBarStyle:")]) {
+                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+            }
+#endif
+        }];
+    }
+    
+#else
+    [viewController presentModalViewController:emailController animated:YES];
+#endif
 }
 @end
