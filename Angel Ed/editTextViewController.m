@@ -69,6 +69,10 @@
     }
     [Posts setTextforCurrentKey:currentText];
     
+    // Getting number of characters in a text
+    int length = (int)[currentText length];
+    NSLog(@"%i", length);
+    
     [Posts savePosts];
 }
 
