@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "GAIMasterViewController.h"
+#import "Posts.h"
 
 #define UIColorHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -51,6 +52,12 @@
     [self.communityButton setContentEdgeInsets:UIEdgeInsetsMake(0, 5, 1, 0)];
     [self.communityButton setTintColor:[self color:3]];
     
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    self.nameLabel.text = [[Posts getPersonalInfo] objectForKey:kPersonName];
     
 }
 

@@ -36,6 +36,11 @@
 #define kCategoryProfessional @"professional"
 #define kCategoryAcademic @"academic"
 
+// For personal info
+#define kPersonName @"name"
+#define kAllPersonalInfo @""
+#define kNamePlaceholder @"Your name"
+
 #define kDetailView @"showDetail"
 
 @interface Posts : NSObject
@@ -65,5 +70,7 @@
 +(void)setTitleforCurrentKey:(NSString *)title;
 
 +(void)countPointsForCategories;
++(NSMutableDictionary *)getPersonalInfo;
++(void)setPersonalName:(NSString *)name;
 
 @end

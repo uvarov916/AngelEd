@@ -12,9 +12,9 @@
 		2C2BD2E9190799AF0017CF03 /* editTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BD2E8190799AF0017CF03 /* editTextViewController.m */; };
 		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
 		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
-		2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ADF918EFEAD500886313 /* SettingsViewController.m */; };
 		2C7CBF931908FD8100783919 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBF921908FD8100783919 /* StatsViewController.m */; };
 		2C7CBFA3190B853C00783919 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBFA2190B853C00783919 /* ProfileViewController.m */; };
+		2C7CBFA6190BB4F000783919 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBFA5190BB4F000783919 /* PersonalInfoViewController.m */; };
 		2CDA51AA190628440074F7CB /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */; };
 		2CE24AA518E4F5C40091D406 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA418E4F5C40091D406 /* Foundation.framework */; };
 		2CE24AA718E4F5C40091D406 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */; };
@@ -55,12 +55,12 @@
 		2C58931618E7A88400E392B6 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
 		2C58932118E7C08F00E392B6 /* MPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextView.h; sourceTree = "<group>"; };
 		2C58932218E7C08F00E392B6 /* MPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTextView.m; sourceTree = "<group>"; };
-		2C66ADF818EFEAD500886313 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		2C66ADF918EFEAD500886313 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		2C7CBF911908FD8100783919 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		2C7CBF921908FD8100783919 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		2C7CBFA1190B853C00783919 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		2C7CBFA2190B853C00783919 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		2C7CBFA4190BB4F000783919 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
+		2C7CBFA5190BB4F000783919 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
 		2CDA51A8190628440074F7CB /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
 		2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
 		2CE24AA118E4F5C40091D406 /* Angel Ed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Angel Ed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +112,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C7CBFA7190BB51100783919 /* Settings page */ = {
+			isa = PBXGroup;
+			children = (
+				2C7CBFA5190BB4F000783919 /* PersonalInfoViewController.m */,
+				2C7CBFA4190BB4F000783919 /* PersonalInfoViewController.h */,
+			);
+			name = "Settings page";
+			sourceTree = "<group>";
+		};
+		2C7CBFA8190BB53800783919 /* Posts page */ = {
+			isa = PBXGroup;
+			children = (
+				2CE24AB918E4F5C40091D406 /* GAIMasterViewController.h */,
+				2CE24ABA18E4F5C40091D406 /* GAIMasterViewController.m */,
+				2C201ABC18FA94DC008B4F31 /* PostListCell.h */,
+				2C201ABD18FA94DC008B4F31 /* PostListCell.m */,
+				2CE24ABC18E4F5C40091D406 /* GAIDetailViewController.h */,
+				2CE24ABD18E4F5C40091D406 /* GAIDetailViewController.m */,
+				2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */,
+				2C2BD2E41907999D0017CF03 /* editTitleViewController.h */,
+				2C2BD2E51907999D0017CF03 /* editTitleViewController.m */,
+				2C2BD2E7190799AF0017CF03 /* editTextViewController.h */,
+				2C2BD2E8190799AF0017CF03 /* editTextViewController.m */,
+			);
+			name = "Posts page";
+			sourceTree = "<group>";
+		};
+		2C7CBFA9190BB55200783919 /* Data model */ = {
+			isa = PBXGroup;
+			children = (
+				2CE24ADC18E4F8E30091D406 /* Posts.h */,
+				2CE24ADD18E4F8E30091D406 /* Posts.m */,
+			);
+			name = "Data model";
+			sourceTree = "<group>";
+		};
 		2CE24A9818E4F5C40091D406 = {
 			isa = PBXGroup;
 			children = (
@@ -148,28 +184,16 @@
 			children = (
 				2CE24AB318E4F5C40091D406 /* GAIAppDelegate.h */,
 				2CE24AB418E4F5C40091D406 /* GAIAppDelegate.m */,
-				2CE24AB918E4F5C40091D406 /* GAIMasterViewController.h */,
-				2CE24ABA18E4F5C40091D406 /* GAIMasterViewController.m */,
-				2C201ABC18FA94DC008B4F31 /* PostListCell.h */,
-				2C201ABD18FA94DC008B4F31 /* PostListCell.m */,
-				2CE24ABC18E4F5C40091D406 /* GAIDetailViewController.h */,
-				2CE24ABD18E4F5C40091D406 /* GAIDetailViewController.m */,
+				2C7CBFA9190BB55200783919 /* Data model */,
+				2C7CBFA8190BB53800783919 /* Posts page */,
 				2CE24ABF18E4F5C40091D406 /* Images.xcassets */,
 				2CE24AAB18E4F5C40091D406 /* Supporting Files */,
-				2CE24ADC18E4F8E30091D406 /* Posts.h */,
-				2CE24ADD18E4F8E30091D406 /* Posts.m */,
+				2C7CBFA7190BB51100783919 /* Settings page */,
 				2C58931518E7A88400E392B6 /* UIColor+Extras.h */,
 				2C58931618E7A88400E392B6 /* UIColor+Extras.m */,
 				2C58932118E7C08F00E392B6 /* MPTextView.h */,
 				2C58932218E7C08F00E392B6 /* MPTextView.m */,
-				2C66ADF818EFEAD500886313 /* SettingsViewController.h */,
-				2C66ADF918EFEAD500886313 /* SettingsViewController.m */,
 				2CDA51A8190628440074F7CB /* CategoryPickerViewController.h */,
-				2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */,
-				2C2BD2E41907999D0017CF03 /* editTitleViewController.h */,
-				2C2BD2E51907999D0017CF03 /* editTitleViewController.m */,
-				2C2BD2E7190799AF0017CF03 /* editTextViewController.h */,
-				2C2BD2E8190799AF0017CF03 /* editTextViewController.m */,
 				2C7CBF911908FD8100783919 /* StatsViewController.h */,
 				2C7CBF921908FD8100783919 /* StatsViewController.m */,
 				2C7CBFA1190B853C00783919 /* ProfileViewController.h */,
@@ -309,9 +333,9 @@
 				2C2BD2E9190799AF0017CF03 /* editTextViewController.m in Sources */,
 				2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */,
 				2CE24AB518E4F5C40091D406 /* GAIAppDelegate.m in Sources */,
+				2C7CBFA6190BB4F000783919 /* PersonalInfoViewController.m in Sources */,
 				2C7CBFA3190B853C00783919 /* ProfileViewController.m in Sources */,
 				2CE24ABB18E4F5C40091D406 /* GAIMasterViewController.m in Sources */,
-				2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */,
 				2CE24AB118E4F5C40091D406 /* main.m in Sources */,
 				2C2BD2E61907999D0017CF03 /* editTitleViewController.m in Sources */,
 				2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */,

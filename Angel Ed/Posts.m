@@ -12,6 +12,7 @@
 
 static NSMutableDictionary *allPosts;
 static NSMutableDictionary *allCategories;
+static NSMutableDictionary *personalInfo;
 static NSString *currentKey;
 
 // Getting all posts dictionary
@@ -32,8 +33,18 @@ static NSString *currentKey;
     return allCategories;
 }
 
++(NSMutableDictionary *)getPersonalInfo {
+    if (personalInfo == nil) {
+        personalInfo = [[NSMutableDictionary alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] dictionaryForKey:kAllPersonalInfo]];
+    }
+    return personalInfo;
+}
 
-
++(void)setPersonalName:(NSString *)name {
+    [personalInfo setObject:name forKey:kPersonName];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:personalInfo forKey:kAllPersonalInfo];
+}
 
 
 
@@ -299,6 +310,7 @@ static NSString *currentKey;
 //    NSLog(@"Networking: %i", [[[Posts getAllCategories] objectForKey:kCategoryNetworking] intValue]);
 //    NSLog(@"Community: %i", [[[Posts getAllCategories] objectForKey:kCategoryCommunity] intValue]);
 }
+
 
 
 @end

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *academicButton;
 @property (weak, nonatomic) IBOutlet UIButton *communityButton;
 @property (weak, nonatomic) IBOutlet UIButton *professionalButton;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 
 @end

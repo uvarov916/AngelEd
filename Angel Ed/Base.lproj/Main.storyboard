@@ -74,6 +74,7 @@
                     <connections>
                         <outlet property="academicButton" destination="xVI-nH-Cln" id="LTs-eQ-1n5"/>
                         <outlet property="communityButton" destination="dkL-Gf-HQ6" id="Xck-wG-nEe"/>
+                        <outlet property="nameLabel" destination="abM-Sh-TRk" id="lal-Eo-wFL"/>
                         <outlet property="networkingButton" destination="Prn-eC-UWQ" id="rSn-fG-fkV"/>
                         <outlet property="professionalButton" destination="4Zi-5m-IWu" id="xU8-2C-rpx"/>
                     </connections>
@@ -353,7 +354,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4e7-UO-T7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2772" y="76"/>
+            <point key="canvasLocation" x="2783" y="58"/>
         </scene>
         <!--Category Picker View Controller - Choose Category-->
         <scene sceneID="vYp-vT-yH1">
@@ -647,16 +648,16 @@
             </objects>
             <point key="canvasLocation" x="952" y="734"/>
         </scene>
-        <!--View Controller - Personal Info-->
+        <!--Personal Info View Controller - Personal Info-->
         <scene sceneID="scK-ye-JI8">
             <objects>
-                <viewController id="73X-OU-NWr" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="73X-OU-NWr" customClass="PersonalInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dbo-HI-61L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Name" id="Av0-J1-6Ko" customClass="MPTextView">
-                                <rect key="frame" x="20" y="122" width="280" height="77"/>
+                                <rect key="frame" x="20" y="144" width="280" height="69"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -673,7 +674,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Personal Info" id="2hh-Z9-94a"/>
+                    <navigationItem key="navigationItem" title="Personal Info" id="2hh-Z9-94a">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="pCk-Kc-7H0">
+                            <connections>
+                                <action selector="doneButton:" destination="73X-OU-NWr" id="cXh-KP-7pt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="enterNameTextView" destination="Av0-J1-6Ko" id="ATO-Aq-mMa"/>
+                        <outlet property="titleTextView" destination="1Rw-wI-lqY" id="V59-ys-A2W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmi-Kb-5LH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
