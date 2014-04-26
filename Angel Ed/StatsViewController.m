@@ -50,14 +50,19 @@
 {
     switch (i) {
         case 0:
-            return UIColorHex(0xF24495);
+            // red
+            return UIColorHex(0xE54EAB);
         case 1:
-            return UIColorHex(0x04BFBF);
+            // blue
+            return UIColorHex(0x2751AE);
         case 2:
-            return UIColorHex(0xB2F252);
+            // green
+            return UIColorHex(0x4AB14E);
         case 3:
-            return UIColorHex(0xF2CB05);
+            // orange
+            return UIColorHex(0xFACB09);
         case 4:
+            // white
             return UIColorHex(0xFFFFFF)/*UIColorHex(0xE9F2DF)*/;
         default:
             break;
