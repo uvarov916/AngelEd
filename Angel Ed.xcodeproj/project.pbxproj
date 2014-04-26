@@ -14,6 +14,7 @@
 		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
 		2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ADF918EFEAD500886313 /* SettingsViewController.m */; };
 		2C7CBF931908FD8100783919 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBF921908FD8100783919 /* StatsViewController.m */; };
+		2C7CBFA3190B853C00783919 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBFA2190B853C00783919 /* ProfileViewController.m */; };
 		2CDA51AA190628440074F7CB /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */; };
 		2CE24AA518E4F5C40091D406 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA418E4F5C40091D406 /* Foundation.framework */; };
 		2CE24AA718E4F5C40091D406 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */; };
@@ -58,6 +59,8 @@
 		2C66ADF918EFEAD500886313 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		2C7CBF911908FD8100783919 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		2C7CBF921908FD8100783919 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		2C7CBFA1190B853C00783919 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		2C7CBFA2190B853C00783919 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		2CDA51A8190628440074F7CB /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
 		2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
 		2CE24AA118E4F5C40091D406 /* Angel Ed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Angel Ed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +172,8 @@
 				2C2BD2E8190799AF0017CF03 /* editTextViewController.m */,
 				2C7CBF911908FD8100783919 /* StatsViewController.h */,
 				2C7CBF921908FD8100783919 /* StatsViewController.m */,
+				2C7CBFA1190B853C00783919 /* ProfileViewController.h */,
+				2C7CBFA2190B853C00783919 /* ProfileViewController.m */,
 			);
 			path = "Angel Ed";
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 				2C2BD2E9190799AF0017CF03 /* editTextViewController.m in Sources */,
 				2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */,
 				2CE24AB518E4F5C40091D406 /* GAIAppDelegate.m in Sources */,
+				2C7CBFA3190B853C00783919 /* ProfileViewController.m in Sources */,
 				2CE24ABB18E4F5C40091D406 /* GAIMasterViewController.m in Sources */,
 				2C66ADFA18EFEAD500886313 /* SettingsViewController.m in Sources */,
 				2CE24AB118E4F5C40091D406 /* main.m in Sources */,

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface StatsViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (strong, nonatomic) IBOutlet UILabel *networkingLabelDet;
 @property (strong, nonatomic) IBOutlet UILabel *communityLabelDet;
