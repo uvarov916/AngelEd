@@ -89,6 +89,9 @@ static NSString *currentKey;
 +(void)savePosts {
     [[NSUserDefaults standardUserDefaults] setObject:allPosts forKey:kAllPosts];
 }
++(void)saveCategories {
+    [[NSUserDefaults standardUserDefaults] setObject:allCategories forKey:kAllCategories];
+}
 
 
 +(NSString *)convertMonthToText:(NSString *)num {
@@ -202,6 +205,7 @@ static NSString *currentKey;
     }
     
     [allPosts setObject:newDictionary forKey:key];
+    [Posts savePosts];
     [self countPointsForCategories];
 }
 
@@ -287,10 +291,13 @@ static NSString *currentKey;
     [allCategories setObject:[NSNumber numberWithInteger:pointsCommunity] forKey:kCategoryCommunity];
     
     
-    NSLog(@"Academic: %i", [[[Posts getAllCategories] objectForKey:kCategoryAcademic] intValue]);
-    NSLog(@"Professional: %i", [[[Posts getAllCategories] objectForKey:kCategoryProfessional] intValue]);
-    NSLog(@"Networking: %i", [[[Posts getAllCategories] objectForKey:kCategoryNetworking] intValue]);
-    NSLog(@"Community: %i", [[[Posts getAllCategories] objectForKey:kCategoryCommunity] intValue]);
+    [Posts saveCategories];
+
+    // Testing code
+//    NSLog(@"Academic: %i", [[[Posts getAllCategories] objectForKey:kCategoryAcademic] intValue]);
+//    NSLog(@"Professional: %i", [[[Posts getAllCategories] objectForKey:kCategoryProfessional] intValue]);
+//    NSLog(@"Networking: %i", [[[Posts getAllCategories] objectForKey:kCategoryNetworking] intValue]);
+//    NSLog(@"Community: %i", [[[Posts getAllCategories] objectForKey:kCategoryCommunity] intValue]);
 }
 
 

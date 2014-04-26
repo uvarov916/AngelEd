@@ -8,6 +8,7 @@
 
 #import "StatsViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Posts.h"
 
 #define UIColorHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -33,6 +34,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated {
     [self createPieChart];
 }
 
@@ -68,10 +72,20 @@
     chart.layer.cornerRadius = 100;
     [self.view addSubview:chart];
     
-    float red = 100;
-    float blue = 50;
-    float green = 50;
-    float orange = 50;
+    
+    // Getting points data
+    NSMutableDictionary *categories = [Posts getAllCategories];
+    NSInteger pointsAcademic = [[categories objectForKey:kCategoryAcademic] integerValue];
+    NSInteger pointsProfessional = [[categories objectForKey:kCategoryProfessional] integerValue];
+    NSInteger pointsNetworking = [[categories objectForKey:kCategoryNetworking] integerValue];
+    NSInteger pointsCommunity = [[categories objectForKey:kCategoryCommunity] integerValue];
+    
+    NSLog(@"Shit: %i", (int)pointsAcademic);
+    
+    float red = pointsAcademic;
+    float blue = pointsProfessional;
+    float green = pointsNetworking;
+    float orange = pointsCommunity;
     float total = red + blue + green + orange;
     
     if (total != 0) {
