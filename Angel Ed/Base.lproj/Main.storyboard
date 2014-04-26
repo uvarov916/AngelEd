@@ -495,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G89-T9-jVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="1396"/>
+            <point key="canvasLocation" x="1022" y="2066"/>
         </scene>
         <!--Navigation Controller - Settings-->
         <scene sceneID="wD6-yH-buR">
@@ -633,6 +633,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7jz-9d-LCR" kind="push" id="epb-Ff-S4Q"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -689,6 +692,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmi-Kb-5LH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1421" y="737"/>
+        </scene>
+        <!--Contact Us View Controller - Contact us-->
+        <scene sceneID="gHb-GZ-abD">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7jz-9d-LCR" customClass="ContactUsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KV7-nK-hzX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feel free to reach us with any questions you have!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gCM-1l-ZeK">
+                                <rect key="frame" x="20" y="229" width="280" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jXG-xv-BhW">
+                                <rect key="frame" x="20" y="300" width="280" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send an email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickEmailButton:" destination="7jz-9d-LCR" eventType="touchUpInside" id="y6f-c2-6J6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact us" id="kSm-m0-Llu"/>
+                    <connections>
+                        <outlet property="emailButton" destination="jXG-xv-BhW" id="1u8-Hv-Tvz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MB6-3D-9sa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381" y="1388"/>
         </scene>
         <!--Navigation Controller - Profile-->
         <scene sceneID="vPb-JK-Y2d">
