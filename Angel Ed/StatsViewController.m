@@ -38,6 +38,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [Posts countPointsForCategories];
     [self createPieChart];
     
     NSMutableDictionary *categories = [Posts getAllCategories];

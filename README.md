@@ -7,11 +7,9 @@ To-do:
 	- Handling empty fields with alerts
 	- Handling done button on keyboard
 	- Handling cancel button on a new post
-- Addins points counting
-- Adding profile and all corresponding pages [possible design option](http://cdn.pttrns.com/pttrns/1937/original/IMG_2859.PNG)
 - Adding settings page and all corresponsing pages [link](http://cdn.pttrns.com/pttrns/2538/original/IMG_4647.PNG)
-- Adding stats page
 - Adding welcome screens with settings
+- Post adding on profile pages
 
 Extra stuff:
 - Walkthrough http://pttrns.com/categories/16-walkthroughs
