@@ -10,4 +10,6 @@
 
 @interface GAIMasterViewController : UITableViewController
 
+@property (nonatomic) NSNumber* selectedButton;
+
 @end

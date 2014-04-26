@@ -38,8 +38,26 @@
 
 
 -(void)viewWillAppear:(BOOL)animated {
+    
     [super viewWillAppear:animated];
-    [self makeObjects];
+    
+    
+    if (!(self.selectedButton == nil)) {
+        
+        // Testing code that alerts identifier of clicked button
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Button was clicked" message:[self.selectedButton stringValue] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
+//        [alert show];
+        
+        
+        self.navigationItem.leftBarButtonItem = nil;
+        self.navigationItem.rightBarButtonItem = nil;
+        [self makeObjectsWithData:self.selectedButton];
+        
+    }
+    else {
+        [self makeObjects];
+    }
+    
     [self.tableView reloadData];
     
     [self updateBackground];
@@ -67,6 +85,47 @@
     }
 }
 
+-(void)makeObjectsWithData:(NSNumber *)num {
+    
+    _objects = [NSMutableArray arrayWithArray:[[Posts getAllPosts] allKeys]];
+    NSDictionary *posts = [Posts getAllPosts];
+    
+    NSMutableIndexSet *indexesToDelete = [NSMutableIndexSet indexSet];
+    NSUInteger currentIndex = 0;
+    
+    NSString *strToCmp = kCategoryDefault;
+    
+    switch ([num integerValue]) {
+        case 1:
+            strToCmp = kCategoryNetworking;
+            break;
+        case 2:
+            strToCmp = kCategoryAcademic;
+            break;
+        case 3:
+            strToCmp = kCategoryCommunity;
+            break;
+        case 4:
+            strToCmp = kCategoryProfessional;
+            break;
+        default:
+            break;
+    }
+    
+    for (id key in _objects) {
+  
+        if (!([[[posts objectForKey:key] objectForKey:kPostCategory] isEqualToString:strToCmp])) {
+            [indexesToDelete addIndex:currentIndex];
+        }
+        currentIndex++;
+    }
+    
+    [_objects removeObjectsAtIndexes:indexesToDelete];
+    [_objects sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [(NSDate *)obj2 compare:(NSDate *)obj1];
+    }];
+
+}
 
 -(void)makeObjects {
     
