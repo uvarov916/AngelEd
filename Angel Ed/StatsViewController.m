@@ -39,11 +39,81 @@
 -(void)viewWillAppear:(BOOL)animated {
     [self createPieChart];
     
-    UILabel  *networkingLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 300, 235, 50)];
+    
+    UILabel *networkingLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 375, 120, 30)];
         networkingLabel.text = @"Networking";
         networkingLabel.textColor = [UIColor darkGrayColor];
-        networkingLabel.font = [UIFont systemFontOfSize:25];
-    [self.scrollView addSubview:networkingLabel];
+        networkingLabel.font = [UIFont systemFontOfSize:22];
+        networkingLabel.textAlignment = NSTextAlignmentRight;
+    
+    UILabel *networkingLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 404, 120, 21)];
+        networkingLabelDet.text = @"367";
+        networkingLabelDet.textColor = [UIColor lightGrayColor];
+        networkingLabelDet.font = [UIFont systemFontOfSize:17];
+        networkingLabelDet.textAlignment = NSTextAlignmentRight;
+    
+    UILabel *communityLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 441, 120, 30)];
+        communityLabel.text = @"Community";
+        communityLabel.textColor = [UIColor darkGrayColor];
+        communityLabel.font = [UIFont systemFontOfSize:22];
+        communityLabel.textAlignment = NSTextAlignmentRight;
+    
+    UILabel *communityLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 473, 120, 21)];
+        communityLabelDet.text = @"367";
+        communityLabelDet.textColor = [UIColor lightGrayColor];
+        communityLabelDet.font = [UIFont systemFontOfSize:17];
+        communityLabelDet.textAlignment = NSTextAlignmentRight;
+    
+    UILabel *academicLabel = [[UILabel alloc] initWithFrame:CGRectMake(180, 375, 120, 30)];
+        academicLabel.text = @"Academic";
+        academicLabel.textColor = [UIColor darkGrayColor];
+        academicLabel.font = [UIFont systemFontOfSize:22];
+        academicLabel.textAlignment = NSTextAlignmentLeft;
+    
+    UILabel *academicLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(180, 404, 120, 21)];
+        academicLabelDet.text = @"367";
+        academicLabelDet.textColor = [UIColor lightGrayColor];
+        academicLabelDet.font = [UIFont systemFontOfSize:17];
+        academicLabelDet.textAlignment = NSTextAlignmentLeft;
+    
+    UILabel *professionalLabel = [[UILabel alloc] initWithFrame:CGRectMake(180, 441, 120, 30)];
+        professionalLabel.text = @"Professional";
+        professionalLabel.textColor = [UIColor darkGrayColor];
+        professionalLabel.font = [UIFont systemFontOfSize:22];
+        professionalLabel.textAlignment = NSTextAlignmentLeft;
+    
+    UILabel *professionalLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(180, 473, 120, 21)];
+        professionalLabelDet.text = @"367";
+        professionalLabelDet.textColor = [UIColor lightGrayColor];
+        professionalLabelDet.font = [UIFont systemFontOfSize:17];
+        professionalLabelDet.textAlignment = NSTextAlignmentLeft;
+    
+    UILabel *totalLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 304, 280, 27)];
+        totalLabel.text = @"1754";
+        totalLabel.textColor = [UIColor darkGrayColor];
+        totalLabel.font = [UIFont systemFontOfSize:21];
+        totalLabel.textAlignment = NSTextAlignmentCenter;
+    
+    UILabel *totalLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 339, 280, 21)];
+        totalLabelDet.text = @"points";
+        totalLabelDet.textColor = [UIColor lightGrayColor];
+        totalLabelDet.font = [UIFont systemFontOfSize:17];
+        totalLabelDet.textAlignment = NSTextAlignmentCenter;
+    
+    
+    
+    [self.view addSubview:totalLabel];
+    [self.view addSubview:totalLabelDet];
+    
+    [self.view addSubview:networkingLabel];
+    [self.view addSubview:communityLabel];
+    [self.view addSubview:academicLabel];
+    [self.view addSubview:professionalLabel];
+    
+    [self.view addSubview:networkingLabelDet];
+    [self.view addSubview:communityLabelDet];
+    [self.view addSubview:academicLabelDet];
+    [self.view addSubview:professionalLabelDet];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,10 +148,10 @@
 
 - (void)createPieChart
 {
-    chart = [[UIView alloc] initWithFrame:CGRectMake(60, 40, 200, 200)];
+    chart = [[UIView alloc] initWithFrame:CGRectMake(60, 80, 200, 200)];
     chart.backgroundColor = [UIColor blackColor];
     chart.layer.cornerRadius = 100;
-    [self.scrollView addSubview:chart];
+    [self.view addSubview:chart];
     
     
     // Getting points data
@@ -90,8 +160,6 @@
     NSInteger pointsProfessional = [[categories objectForKey:kCategoryProfessional] integerValue];
     NSInteger pointsNetworking = [[categories objectForKey:kCategoryNetworking] integerValue];
     NSInteger pointsCommunity = [[categories objectForKey:kCategoryCommunity] integerValue];
-    
-    NSLog(@"Shit: %i", (int)pointsAcademic);
     
     float red = pointsAcademic;
     float blue = pointsProfessional;
