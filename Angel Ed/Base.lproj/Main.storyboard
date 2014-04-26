@@ -63,6 +63,10 @@
                                     <segue destination="pGg-6v-bdr" kind="push" id="jEq-Tn-9bY"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePicturePlaceholder" id="04A-Dk-OQx">
+                                <rect key="frame" x="98" y="91" width="125" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -705,6 +709,7 @@
         <image name="posts" width="25" height="25"/>
         <image name="professional" width="123" height="87"/>
         <image name="profile" width="25" height="25"/>
+        <image name="profilePicturePlaceholder" width="111" height="111"/>
         <image name="settings" width="25" height="25"/>
         <image name="stats" width="25" height="25"/>
         <image name="tabBarSelectedBackground" width="80" height="49"/>
