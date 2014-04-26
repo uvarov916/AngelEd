@@ -58,7 +58,7 @@
         communityLabel.font = [UIFont systemFontOfSize:22];
         communityLabel.textAlignment = NSTextAlignmentRight;
     
-    UILabel *communityLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 473, 120, 21)];
+    UILabel *communityLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 470, 120, 21)];
         communityLabelDet.text = @"367";
         communityLabelDet.textColor = [UIColor lightGrayColor];
         communityLabelDet.font = [UIFont systemFontOfSize:17];
@@ -82,28 +82,28 @@
         professionalLabel.font = [UIFont systemFontOfSize:22];
         professionalLabel.textAlignment = NSTextAlignmentLeft;
     
-    UILabel *professionalLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(180, 473, 120, 21)];
+    UILabel *professionalLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(180, 470, 120, 21)];
         professionalLabelDet.text = @"367";
         professionalLabelDet.textColor = [UIColor lightGrayColor];
         professionalLabelDet.font = [UIFont systemFontOfSize:17];
         professionalLabelDet.textAlignment = NSTextAlignmentLeft;
     
-    UILabel *totalLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 304, 280, 27)];
-        totalLabel.text = @"1754";
-        totalLabel.textColor = [UIColor darkGrayColor];
-        totalLabel.font = [UIFont systemFontOfSize:21];
-        totalLabel.textAlignment = NSTextAlignmentCenter;
     
-    UILabel *totalLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 339, 280, 21)];
-        totalLabelDet.text = @"points";
-        totalLabelDet.textColor = [UIColor lightGrayColor];
-        totalLabelDet.font = [UIFont systemFontOfSize:17];
-        totalLabelDet.textAlignment = NSTextAlignmentCenter;
+    UIView *networkingRect = [[UIView alloc] initWithFrame:CGRectMake(148, 375, 4, 50)];
+    networkingRect.backgroundColor = [self color:2];
+    [self.view addSubview:networkingRect];
     
+    UIView *academicRect = [[UIView alloc] initWithFrame:CGRectMake(168, 375, 4, 50)];
+    academicRect.backgroundColor = [self color:0];
+    [self.view addSubview:academicRect];
     
+    UIView *communityRect = [[UIView alloc] initWithFrame:CGRectMake(148, 441, 4, 50)];
+    communityRect.backgroundColor = [self color:3];
+    [self.view addSubview:communityRect];
     
-    [self.view addSubview:totalLabel];
-    [self.view addSubview:totalLabelDet];
+    UIView *professionalRect = [[UIView alloc] initWithFrame:CGRectMake(168, 441, 4, 50)];
+    professionalRect.backgroundColor = [self color:1];
+    [self.view addSubview:professionalRect];
     
     [self.view addSubview:networkingLabel];
     [self.view addSubview:communityLabel];
@@ -113,7 +113,41 @@
     [self.view addSubview:networkingLabelDet];
     [self.view addSubview:communityLabelDet];
     [self.view addSubview:academicLabelDet];
-    [self.view addSubview:professionalLabelDet];
+    [self.view addSubview:professionalLabelDet]; 
+    
+    
+    UILabel *totalLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 304, 280, 27)];
+        totalLabel.text = @"1754";
+        totalLabel.textColor = [UIColor darkGrayColor];
+        totalLabel.font = [UIFont systemFontOfSize:23];
+        totalLabel.textAlignment = NSTextAlignmentCenter;
+    
+    UILabel *totalLabelDet = [[UILabel alloc] initWithFrame:CGRectMake(20, 339, 280, 21)];
+        totalLabelDet.text = @"points";
+        totalLabelDet.textColor = [UIColor lightGrayColor];
+        totalLabelDet.font = [UIFont systemFontOfSize:17];
+        totalLabelDet.textAlignment = NSTextAlignmentCenter;
+    
+    
+    UIView *totalNetworkingRect = [[UIView alloc] initWithFrame:CGRectMake(80, 333, 40, 4)];
+    totalNetworkingRect.backgroundColor = [self color:2];
+    [self.view addSubview:totalNetworkingRect];
+    
+    UIView *totalAcademicRect = [[UIView alloc] initWithFrame:CGRectMake(120, 333, 40, 4)];
+    totalAcademicRect.backgroundColor = [self color:0];
+    [self.view addSubview:totalAcademicRect];
+    
+    UIView *totalCommunityRect = [[UIView alloc] initWithFrame:CGRectMake(160, 333, 40, 4)];
+    totalCommunityRect.backgroundColor = [self color:3];
+    [self.view addSubview:totalCommunityRect];
+    
+    UIView *totalProfessionalRect = [[UIView alloc] initWithFrame:CGRectMake(200, 333, 40, 4)];
+    totalProfessionalRect.backgroundColor = [self color:1];
+    [self.view addSubview:totalProfessionalRect];
+    
+    
+    [self.view addSubview:totalLabel];
+    [self.view addSubview:totalLabelDet];
 }
 
 - (void)didReceiveMemoryWarning
