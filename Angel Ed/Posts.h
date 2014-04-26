@@ -20,6 +20,7 @@
 #define kTitlePlaceholder @"Your title"
 
 #define kAllPosts @"posts"
+#define kAllCategories @"categories"
 
 #define kPostCategory @"category"
 #define kPostTitle @"title"
@@ -41,8 +42,9 @@
 
 +(NSString *)convertMonthToText:(NSString *)num;
 
-// Getting data
+// Getting data for posts and categories
 +(NSMutableDictionary *)getAllPosts;
++(NSMutableDictionary *)getAllCategories;
 
 +(NSMutableDictionary *)getPostDataForKey:(NSString *)key;
 +(NSMutableDictionary *)getPostDataForCurrentKey;
@@ -62,5 +64,6 @@
 +(void)setTextforCurrentKey:(NSString *)text;
 +(void)setTitleforCurrentKey:(NSString *)title;
 
++(void)countPointsForCategories;
 
 @end

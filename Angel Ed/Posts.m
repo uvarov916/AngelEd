@@ -11,6 +11,7 @@
 @implementation Posts
 
 static NSMutableDictionary *allPosts;
+static NSMutableDictionary *allCategories;
 static NSString *currentKey;
 
 // Getting all posts dictionary
@@ -22,6 +23,14 @@ static NSString *currentKey;
     return allPosts;
 }
 
+// Getting all categories dictionary
++(NSMutableDictionary *)getAllCategories {
+    
+    if (allCategories == nil) {
+        allCategories = [[NSMutableDictionary alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] dictionaryForKey:kAllCategories]];
+    }
+    return allCategories;
+}
 
 
 
@@ -128,6 +137,7 @@ static NSString *currentKey;
 
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategory:(NSString *)category forKey:(NSString *)key {
     
+    
     if ([allPosts objectForKey:key] == nil) {
         [allPosts setObject:[[NSMutableDictionary alloc] init] forKey:key];
     }
@@ -192,6 +202,7 @@ static NSString *currentKey;
     }
     
     [allPosts setObject:newDictionary forKey:key];
+    [self countPointsForCategories];
 }
 
 +(void)setTitle:(NSString *)title setText:(NSString *)text setCategoryforCurrentKey:(NSString *)category {
@@ -220,6 +231,66 @@ static NSString *currentKey;
     NSString *currentText = [post objectForKey:kPostText];
     
     [Posts setTitle:title setText:currentText setCategory:currentCategory forKey:currentKey];
+}
+
++(void)countPointsForCategories {
+    
+    // Creating dictionaries for categories
+//    if([allCategories objectForKey:kCategoryAcademic] == nil) {
+//        [allCategories setObject:[[NSMutableDictionary alloc] init] forKey:kCategoryAcademic];
+//    }
+//    if([allCategories objectForKey:kCategoryProfessional] == nil) {
+//        [allCategories setObject:[[NSMutableDictionary alloc] init] forKey:kCategoryProfessional];
+//    }
+//    if([allCategories objectForKey:kCategoryNetworking] == nil) {
+//        [allCategories setObject:[[NSMutableDictionary alloc] init] forKey:kCategoryNetworking];
+//    }
+//    if([allCategories objectForKey:kCategoryCommunity] == nil) {
+//        [allCategories setObject:[[NSMutableDictionary alloc] init] forKey:kCategoryCommunity];
+//    }
+    
+//    NSNumber *pointsAcademic = [NSNumber numberWithInt:0];
+//    NSNumber *pointsProfessional = [NSNumber numberWithInt:0];
+//    NSNumber *pointsNetworking = [NSNumber numberWithInt:0];
+//    NSNumber *pointsCommunity = [NSNumber numberWithInt:0];
+    
+    NSInteger pointsAcademic = 0;
+    NSInteger pointsProfessional = 0;
+    NSInteger pointsNetworking = 0;
+    NSInteger pointsCommunity = 0;
+    
+    
+    for (id key in allPosts) {
+        NSMutableDictionary *post = [Posts getPostDataForKey:key];
+        NSInteger postPoints = [[post objectForKey:kPostPoints] intValue];
+        NSString *postCategory = [post objectForKey:kPostCategory];
+        
+        if ([postCategory isEqualToString:kCategoryAcademic]) {
+            pointsAcademic += postPoints;
+        }
+        else if ([postCategory isEqualToString:kCategoryProfessional]) {
+            pointsProfessional += postPoints;
+        }
+        else if ([postCategory isEqualToString:kCategoryNetworking]) {
+            pointsNetworking += postPoints;
+        }
+        else if ([postCategory isEqualToString:kCategoryCommunity]) {
+            pointsCommunity += postPoints;
+        }
+    }
+    
+    
+    
+    [allCategories setObject:[NSNumber numberWithInteger:pointsAcademic] forKey:kCategoryAcademic];
+    [allCategories setObject:[NSNumber numberWithInteger:pointsProfessional] forKey:kCategoryProfessional];
+    [allCategories setObject:[NSNumber numberWithInteger:pointsNetworking] forKey:kCategoryNetworking];
+    [allCategories setObject:[NSNumber numberWithInteger:pointsCommunity] forKey:kCategoryCommunity];
+    
+    
+    NSLog(@"Academic: %i", [[[Posts getAllCategories] objectForKey:kCategoryAcademic] intValue]);
+    NSLog(@"Professional: %i", [[[Posts getAllCategories] objectForKey:kCategoryProfessional] intValue]);
+    NSLog(@"Networking: %i", [[[Posts getAllCategories] objectForKey:kCategoryNetworking] intValue]);
+    NSLog(@"Community: %i", [[[Posts getAllCategories] objectForKey:kCategoryCommunity] intValue]);
 }
 
 

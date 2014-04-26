@@ -16,6 +16,7 @@
 {
     // Override point for customization after application launch.
     [Posts getAllPosts];
+    [Posts getAllCategories];
     
     [self customizeUserInterface];
 

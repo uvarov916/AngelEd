@@ -114,32 +114,29 @@
 
 -(void)viewWillDisappear:(BOOL)animated {
     
-    if (!([self.titleView.text isEqualToString:@""] && [self.textView.text isEqualToString:@""])) {
-        [self saveData];
-    }
-    else {
+    if ([self.titleView.text isEqualToString:@""] && [self.textView.text isEqualToString:@""]) {
         [Posts removePostForKey:[Posts getCurrentKey]];
     }
 }
 
--(void)saveData {
-    NSString *currentTitle = kDefaultTitle;
-    NSString *currentCategory = kDefaultCategory;
-    NSString *currentText = kDefaultText;
-    if (![self.titleView.text isEqualToString:@""]) {
-        currentTitle = self.titleView.text;
-    }
-    if (![self.categoryView.text isEqualToString:@""]) {
-        currentCategory = self.categoryView.text;
-    }
-    if (![self.textView.text isEqualToString:@""]) {
-        currentText = self.textView.text;
-    }
-    [Posts setTitle:currentTitle setText:self.textView.text setCategoryforCurrentKey:currentCategory];
-    
-    
-    [Posts savePosts];
-}
+//-(void)saveData {
+//    NSString *currentTitle = kDefaultTitle;
+//    NSString *currentCategory = kDefaultCategory;
+//    NSString *currentText = kDefaultText;
+//    if (![self.titleView.text isEqualToString:@""]) {
+//        currentTitle = self.titleView.text;
+//    }
+//    if (![self.categoryView.text isEqualToString:@""]) {
+//        currentCategory = self.categoryView.text;
+//    }
+//    if (![self.textView.text isEqualToString:@""]) {
+//        currentText = self.textView.text;
+//    }
+//    [Posts setTitle:currentTitle setText:self.textView.text setCategoryforCurrentKey:currentCategory];
+//    
+//    
+//    [Posts savePosts];
+//}
 
 
 - (void)viewDidLoad
