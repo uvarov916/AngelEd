@@ -115,6 +115,7 @@
         CAShapeLayer *sl = [[CAShapeLayer alloc] init];
         sl.fillColor = [self color:i].CGColor;
         sl.path = path.CGPath;
+        sl.strokeColor = [self color:i].CGColor;
         [chart.layer addSublayer:sl];
         
         start = end;
