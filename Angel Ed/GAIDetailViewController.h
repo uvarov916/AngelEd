@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *categoryView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIScrollView *postScrollView;
+@property (weak, nonatomic) IBOutlet UITextView *pointsTextView;
 
 @end

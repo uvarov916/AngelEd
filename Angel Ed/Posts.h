@@ -27,6 +27,7 @@
 #define kPostTime @"time"
 #define kPostDate @"date"
 #define kPostMonth @"month"
+#define kPostPoints @"points"
 
 #define kCategoryDefault @"uncategorized"
 #define kCategoryCommunity @"community"

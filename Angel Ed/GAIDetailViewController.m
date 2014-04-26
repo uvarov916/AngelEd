@@ -19,6 +19,7 @@
 @synthesize titleView;
 @synthesize categoryView;
 @synthesize textView;
+@synthesize pointsTextView;
 
 #pragma mark - Managing the detail item
 
@@ -49,6 +50,7 @@
     NSString *currentTitle = [post objectForKey:kPostTitle];
     NSString *currentText = [post objectForKey:kPostText];
     NSString *currentCategory = [post objectForKey:kPostCategory];
+    NSString *currentPoints = [[post objectForKey:kPostPoints] stringValue];
     
     if (![currentTitle isEqualToString:@""]) {
         self.titleView.text = currentTitle;
@@ -68,6 +70,10 @@
     else {
         self.textView.text = kDefaultText;
     }
+    
+    // Changing points label
+    self.pointsTextView.text = [currentPoints stringByAppendingString:@" points"];
+    
     
     //((MPTextView *)titleView).placeholderText = kTitlePlaceholder;
     //((MPTextView *)categoryView).placeholderText = kCategoryPlaceholder;
@@ -92,29 +98,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
-    NSString *currentTitle = [post objectForKey:kPostTitle];
-    NSString *currentCategory = [post objectForKey:kPostCategory];
-    NSString *currentText = [post objectForKey:kPostText];
-    
-    if (![currentTitle isEqualToString:@""]) {
-        self.titleView.text = currentTitle;
-    }
-    else {
-        self.titleView.text = kDefaultTitle;
-    }
-    if (![currentCategory isEqualToString:@""]) {
-        self.categoryView.text = [currentCategory capitalizedString];
-    }
-    else {
-        self.categoryView.text = [kDefaultCategory capitalizedString];
-    }
-    if (![currentText isEqualToString:@""]) {
-        self.textView.text = currentText;
-    }
-    else {
-        self.textView.text = kDefaultText;
-    }
+    [self configureView];
     
     
     // Resizing textView

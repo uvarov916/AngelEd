@@ -39,6 +39,7 @@ static NSString *currentKey;
     [post setObject:kDefaultTitle forKey:kPostTitle];
     [post setObject:kDefaultCategory forKey:kPostCategory];
     [post setObject:kDefaultText forKey:kPostText];
+    [post setObject:[NSNumber numberWithInt:0] forKey:kPostPoints];
     
     // Setting up post time
     [post setObject:kDefaultDate forKey:kPostDate];
@@ -141,9 +142,13 @@ static NSString *currentKey;
     
     if (text == nil) {
         [newDictionary setObject:kDefaultText forKey:kPostText];
+        [newDictionary setObject:[NSNumber numberWithInt:0] forKey:kPostPoints];
     }
     else {
         [newDictionary setObject:text forKey:kPostText];
+        int length = (int)[text length];
+        NSNumber *nslength = [NSNumber numberWithInt:length];
+        [newDictionary setObject:nslength forKey:kPostPoints];
     }
     
     if (category == nil) {
