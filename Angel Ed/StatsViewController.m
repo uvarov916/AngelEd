@@ -38,6 +38,12 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [self createPieChart];
+    
+    UILabel  *networkingLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 300, 235, 50)];
+        networkingLabel.text = @"Networking";
+        networkingLabel.textColor = [UIColor darkGrayColor];
+        networkingLabel.font = [UIFont systemFontOfSize:25];
+    [self.scrollView addSubview:networkingLabel];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,10 +78,10 @@
 
 - (void)createPieChart
 {
-    chart = [[UIView alloc] initWithFrame:CGRectMake(60, 100, 200, 200)];
+    chart = [[UIView alloc] initWithFrame:CGRectMake(60, 40, 200, 200)];
     chart.backgroundColor = [UIColor blackColor];
     chart.layer.cornerRadius = 100;
-    [self.view addSubview:chart];
+    [self.scrollView addSubview:chart];
     
     
     // Getting points data
