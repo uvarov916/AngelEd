@@ -112,6 +112,10 @@
             break;
     }
     
+    
+    // Changing title of the page according to current category
+    [self setTitle:[strToCmp capitalizedString]];
+    
     for (id key in _objects) {
   
         if (!([[[posts objectForKey:key] objectForKey:kPostCategory] isEqualToString:strToCmp])) {
