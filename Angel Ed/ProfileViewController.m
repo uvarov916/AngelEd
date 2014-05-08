@@ -57,7 +57,13 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
-    self.nameLabel.text = [[Posts getPersonalInfo] objectForKey:kPersonName];
+    if ([[Posts getPersonalInfo] objectForKey:kPersonName] == nil || [[[Posts getPersonalInfo] objectForKey:kPersonName] isEqualToString:@""]) {
+        self.nameLabel.text = @"Your Name";
+    }
+    else {
+        self.nameLabel.text = [[Posts getPersonalInfo] objectForKey:kPersonName];
+    }
+
     
 }
 
