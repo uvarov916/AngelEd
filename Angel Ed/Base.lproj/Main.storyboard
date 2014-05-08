@@ -500,7 +500,6 @@
         <!--Navigation Controller - Settings-->
         <scene sceneID="wD6-yH-buR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1RB-kb-CcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oJ9-dG-A30" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="ocH-nw-fKh"/>
                     <toolbarItems/>
@@ -517,6 +516,7 @@
                         <segue destination="OY9-Fw-zrh" kind="relationship" relationship="rootViewController" id="lpf-5S-j8D"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1RB-kb-CcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="524" y="738"/>
         </scene>
@@ -565,6 +565,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zkT-lI-ePX" kind="push" id="Guh-Ef-aXt"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Li4-V2-hwH">
                                         <rect key="frame" x="0.0" y="207" width="320" height="44"/>
@@ -691,7 +694,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmi-Kb-5LH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421" y="737"/>
+            <point key="canvasLocation" x="1428" y="1401"/>
+        </scene>
+        <!--Difficulty Ranking View Controller - Difficulty ranking-->
+        <scene sceneID="ftk-kg-ekV">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zkT-lI-ePX" customClass="DifficultyRankingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyT-Zw-U8G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8uz-XF-tZV">
+                                <rect key="frame" x="0.0" y="173" width="320" height="221"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9gf-JC-mMf">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gf-JC-mMf" id="7BU-UH-lCr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Difficulty ranking" id="G2q-Lv-7jq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="su7-3J-0aG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1445" y="728"/>
         </scene>
         <!--Contact Us View Controller - Contact us-->
         <scene sceneID="gHb-GZ-abD">
@@ -729,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MB6-3D-9sa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1381" y="1388"/>
+            <point key="canvasLocation" x="1347" y="1842"/>
         </scene>
         <!--Navigation Controller - Profile-->
         <scene sceneID="vPb-JK-Y2d">
