@@ -41,6 +41,7 @@
     
     [super viewWillAppear:animated];
     
+    self.navigationItem.leftBarButtonItem = nil;
     
     if (!(self.selectedButton == nil)) {
         
@@ -49,7 +50,7 @@
 //        [alert show];
         
         
-        self.navigationItem.leftBarButtonItem = nil;
+//        self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.rightBarButtonItem = nil;
         [self makeObjectsWithData:self.selectedButton];
         
