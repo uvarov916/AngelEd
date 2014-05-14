@@ -11,7 +11,6 @@ To-do:
 - Adding settings page and all corresponsing pages [link](http://cdn.pttrns.com/pttrns/2538/original/IMG_4647.PNG)
 - Adding welcome screens with settings
 - Post adding on profile pages (or change background image when there are no posts)
-- Change button colors to white in "sending an email"
 
 Extra stuff:
 - Walkthrough http://pttrns.com/categories/16-walkthroughs
