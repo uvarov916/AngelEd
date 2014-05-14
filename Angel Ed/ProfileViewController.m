@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 #import "GAIMasterViewController.h"
 #import "Posts.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define UIColorHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
@@ -77,6 +78,8 @@
     
     [self.profileImageButton setImage:self.pickedImage forState:UIControlStateNormal];
     [self.profileImageButton setImage:self.pickedImage forState:UIControlStateHighlighted];
+    
+    self.profileImageButton.layer.cornerRadius = CGRectGetWidth(self.profileImageButton.frame) / 2.0f;
     
 }
 

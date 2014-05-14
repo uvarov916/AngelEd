@@ -10,6 +10,7 @@
 		2C201ABE18FA94DC008B4F31 /* PostListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C201ABD18FA94DC008B4F31 /* PostListCell.m */; };
 		2C2BD2E61907999D0017CF03 /* editTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BD2E51907999D0017CF03 /* editTitleViewController.m */; };
 		2C2BD2E9190799AF0017CF03 /* editTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BD2E8190799AF0017CF03 /* editTextViewController.m */; };
+		2C55048F1923CC9E00EBC2EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C55048E1923CC9E00EBC2EE /* QuartzCore.framework */; };
 		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
 		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
 		2C7CBF931908FD8100783919 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBF921908FD8100783919 /* StatsViewController.m */; };
@@ -53,6 +54,7 @@
 		2C2BD2E51907999D0017CF03 /* editTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editTitleViewController.m; sourceTree = "<group>"; };
 		2C2BD2E7190799AF0017CF03 /* editTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editTextViewController.h; sourceTree = "<group>"; };
 		2C2BD2E8190799AF0017CF03 /* editTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editTextViewController.m; sourceTree = "<group>"; };
+		2C55048E1923CC9E00EBC2EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2C58931518E7A88400E392B6 /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
 		2C58931618E7A88400E392B6 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
 		2C58932118E7C08F00E392B6 /* MPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextView.h; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C55048F1923CC9E00EBC2EE /* QuartzCore.framework in Frameworks */,
 				2CE24AA718E4F5C40091D406 /* CoreGraphics.framework in Frameworks */,
 				2CE24AA918E4F5C40091D406 /* UIKit.framework in Frameworks */,
 				2CE24AA518E4F5C40091D406 /* Foundation.framework in Frameworks */,
@@ -181,6 +184,7 @@
 		2CE24AA318E4F5C40091D406 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C55048E1923CC9E00EBC2EE /* QuartzCore.framework */,
 				2CE24AA418E4F5C40091D406 /* Foundation.framework */,
 				2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */,
 				2CE24AA818E4F5C40091D406 /* UIKit.framework */,
