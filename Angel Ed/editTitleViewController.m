@@ -65,6 +65,23 @@
 
 -(void)viewWillDisappear:(BOOL)animated {
     [self saveData];
+    
+}
+
+- (void)showMessage {
+    NSMutableDictionary *post = [Posts getPostDataForCurrentKey];
+    NSNumber *postPoints = [post objectForKey:kPostPoints];
+    NSString *postCategory = [post objectForKey:kPostCategory];
+    
+    NSString *text = [[[[@"You just got " stringByAppendingString:[postPoints stringValue]] stringByAppendingString:@" points in "] stringByAppendingString:postCategory] stringByAppendingString:@" category!"];
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Congratulations!"
+                                                      message:text
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    
+    [message show];
 }
 
 /*
@@ -82,5 +99,6 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+    [self showMessage];
 }
 @end
