@@ -38,6 +38,7 @@
 
 // For personal info
 #define kPersonName @"name"
+#define kPersonPhoto @"photo"
 #define kAllPersonalInfo @""
 #define kNamePlaceholder @"Your name"
 
@@ -72,5 +73,6 @@
 +(void)countPointsForCategories;
 +(NSMutableDictionary *)getPersonalInfo;
 +(void)setPersonalName:(NSString *)name;
++(void)setPersonalPhoto:(NSData *)photo;
 
 @end

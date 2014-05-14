@@ -46,6 +46,12 @@ static NSString *currentKey;
     [[NSUserDefaults standardUserDefaults] setObject:personalInfo forKey:kAllPersonalInfo];
 }
 
++(void)setPersonalPhoto:(NSData *)photo {
+    [personalInfo setObject:photo forKey:kPersonPhoto];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:personalInfo forKey:kAllPersonalInfo];
+}
+
 
 
 // Getting a dictionary for a specific post

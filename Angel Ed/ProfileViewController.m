@@ -12,7 +12,11 @@
 
 #define UIColorHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+
+@property (nonatomic, strong) UIImage *pickedImage;
+
 
 @end
 
@@ -64,6 +68,15 @@
         self.nameLabel.text = [[Posts getPersonalInfo] objectForKey:kPersonName];
     }
 
+    NSMutableDictionary *personalInfo = [Posts getPersonalInfo];
+    self.pickedImage = [UIImage imageWithData:[personalInfo objectForKey:kPersonPhoto]];
+    
+    if (self.pickedImage == nil) {
+        self.pickedImage = [UIImage imageNamed:@"profilePicturePlaceholder"];
+    }
+    
+    [self.profileImageButton setImage:self.pickedImage forState:UIControlStateNormal];
+    [self.profileImageButton setImage:self.pickedImage forState:UIControlStateHighlighted];
     
 }
 
@@ -118,4 +131,69 @@
     
 }
 
+-(void)setPickedImage:(UIImage *)pickedImage {
+    
+    _pickedImage = pickedImage;
+    
+    if (pickedImage == nil) {
+        [self.profileImageButton setImage:[UIImage imageNamed:@"profilePicturePlaceholder"] forState:UIControlStateNormal];
+    }
+    else {
+        [self.profileImageButton setImage:pickedImage forState:UIControlStateNormal];
+        [self.profileImageButton setImage:pickedImage forState:UIControlStateHighlighted];
+    }
+    
+}
+
+-(void)saveData {
+    NSData *newPhoto;
+    newPhoto = UIImageJPEGRepresentation(self.pickedImage, 1);
+    [Posts setPersonalPhoto:newPhoto];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [self saveData];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    self.pickedImage = image;
+    
+    [self saveData];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)profileImageButtonWasPressed:(id)sender {
+    UIImagePickerController *controller = [[UIImagePickerController alloc] init];
+    controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    controller.delegate = self;
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

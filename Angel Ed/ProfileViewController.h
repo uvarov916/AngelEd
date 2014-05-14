@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *communityButton;
 @property (weak, nonatomic) IBOutlet UIButton *professionalButton;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *profileImageButton;
+- (IBAction)profileImageButtonWasPressed:(id)sender;
 
 
 @end
