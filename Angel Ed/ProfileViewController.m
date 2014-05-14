@@ -57,7 +57,7 @@
     [self.communityButton setContentEdgeInsets:UIEdgeInsetsMake(0, 5, 1, 0)];
     [self.communityButton setTintColor:[self color:3]];
     
-    
+    self.profileImageButton.layer.cornerRadius = CGRectGetWidth(self.profileImageButton.frame) / 2.0f;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -79,7 +79,7 @@
     [self.profileImageButton setImage:self.pickedImage forState:UIControlStateNormal];
     [self.profileImageButton setImage:self.pickedImage forState:UIControlStateHighlighted];
     
-    self.profileImageButton.layer.cornerRadius = CGRectGetWidth(self.profileImageButton.frame) / 2.0f;
+    
     
 }
 
