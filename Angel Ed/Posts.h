@@ -76,6 +76,8 @@
 +(void)changeDifficultyRankingFrom:(NSInteger)old To:(NSInteger)new;
 +(NSString *)getCategoryByInterestRanking:(NSInteger) n;
 +(void)changeInterestRankingFrom:(NSInteger)old To:(NSInteger)new;
++(void)initRankings;
++(float)getMultiplierFromCategoryName:(NSString *)category;
 +(void)saveRankings;
 
 

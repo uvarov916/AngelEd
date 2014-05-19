@@ -185,7 +185,95 @@ static NSString *currentKey;
     [[NSUserDefaults standardUserDefaults] setObject:categoryRankings forKey:kCategoryRankings];
 }
 
++(void)initRankings {
+    if (categoryRankings == nil) {
+        categoryRankings = [[NSMutableDictionary alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] dictionaryForKey:kCategoryRankings]];
+    }
+    
+    NSMutableDictionary *temp = [[NSMutableDictionary alloc] init];
+    [temp setObject:[NSNumber numberWithInt:1] forKey:kAcademicInterest];
+    [temp setObject:[NSNumber numberWithInt:2] forKey:kProfessionalInterest];
+    [temp setObject:[NSNumber numberWithInt:3] forKey:kNetworkingInterest];
+    [temp setObject:[NSNumber numberWithInt:4] forKey:kCommunityInterest];
+    
+    if ([categoryRankings objectForKey:kRankingsByInterest] == nil) {
+        [categoryRankings setObject:[[NSMutableDictionary alloc] initWithDictionary:temp] forKey:kRankingsByInterest];
+    }
+    else if ([categoryRankings objectForKey:kRankingsByDifficulty] == nil) {
+        [categoryRankings setObject:[[NSMutableDictionary alloc] initWithDictionary:temp] forKey:kRankingsByDifficulty];
+    }
+}
 
++(float)getMultiplierFromCategoryName:(NSString *)category {
+    
+    NSInteger difficultyRank = 0;
+    NSInteger interestRank = 0;
+    
+    NSLog(category);
+    
+    if ([category isEqualToString:kCategoryAcademic]) {
+        difficultyRank = [[[categoryRankings objectForKey:kRankingsByDifficulty] objectForKey:kAcademicDifficulty] integerValue];
+        interestRank = [[[categoryRankings objectForKey:kRankingsByInterest] objectForKey:kAcademicInterest] integerValue];
+        NSLog(@"Inside if statement");
+        NSLog([[[categoryRankings objectForKey:kRankingsByDifficulty] objectForKey:kAcademicDifficulty] stringValue]);
+        NSLog([[[categoryRankings objectForKey:kRankingsByInterest] objectForKey:kAcademicInterest] stringValue]);
+    }
+    else if ([category isEqualToString:kCategoryProfessional]) {
+        difficultyRank = [[[categoryRankings objectForKey:kRankingsByDifficulty] objectForKey:kProfessionalDifficulty] integerValue];
+        interestRank = [[[categoryRankings objectForKey:kRankingsByInterest] objectForKey:kProfessionalInterest] integerValue];
+    }
+    else if ([category isEqualToString:kCategoryNetworking]) {
+        difficultyRank = [[[categoryRankings objectForKey:kRankingsByDifficulty] objectForKey:kNetworkingDifficulty] integerValue];
+        interestRank = [[[categoryRankings objectForKey:kRankingsByInterest] objectForKey:kNetworkingInterest] integerValue];
+    }
+    else if ([category isEqualToString:kCategoryCommunity]) {
+        difficultyRank = [[[categoryRankings objectForKey:kRankingsByDifficulty] objectForKey:kCommunityDifficulty] integerValue];
+        interestRank = [[[categoryRankings objectForKey:kRankingsByInterest] objectForKey:kCommunityInterest] integerValue];
+    }
+    
+    float difficultyMultiplier = 1.0;
+    float interestMultiplier = 1.0;
+    
+    switch (difficultyRank) {
+        case 1:
+            difficultyMultiplier = 2.0;
+            break;
+        case 2:
+            difficultyMultiplier = 1.75;
+            break;
+        case 3:
+            difficultyMultiplier = 1.5;
+            break;
+        case 4:
+            difficultyMultiplier = 1.25;
+            break;
+        default:
+            break;
+    }
+    
+    switch (interestRank) {
+        case 1:
+            interestMultiplier = 2.0;
+            break;
+        case 2:
+            interestMultiplier = 1.75;
+            break;
+        case 3:
+            interestMultiplier = 1.5;
+            break;
+        case 4:
+            interestMultiplier = 1.25;
+            break;
+        default:
+            break;
+    }
+    
+    float result = interestMultiplier * difficultyMultiplier;
+    
+    // NSLog(@"%.2f", result);
+    
+    return result;
+}
 
 
 // Getting all posts dictionary
@@ -349,8 +437,10 @@ static NSString *currentKey;
     }
     else {
         [newDictionary setObject:text forKey:kPostText];
+        float multiplier = [Posts getMultiplierFromCategoryName:category];
         int length = (int)[text length];
-        NSNumber *nslength = [NSNumber numberWithInt:length];
+        int result = (int)(multiplier * length);
+        NSNumber *nslength = [NSNumber numberWithInt:result];
         [newDictionary setObject:nslength forKey:kPostPoints];
     }
     

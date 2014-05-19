@@ -19,6 +19,7 @@
     [Posts getAllCategories];
     
     [self customizeUserInterface];
+    [Posts initRankings];
 
     return YES;
 }
