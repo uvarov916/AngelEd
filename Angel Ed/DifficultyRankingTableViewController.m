@@ -29,13 +29,17 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DefaultCell" forIndexPath:indexPath];
 
-    cell.textLabel.text = [Posts getCategoryByDifficultyRanking:(indexPath.row + 1)];
+    cell.textLabel.text = [[Posts getCategoryByDifficultyRanking:(indexPath.row + 1)] capitalizedString];
     
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return @"The most difficult";
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    return @"THE EASIEST";
 }
 
 - (void)viewDidLoad
@@ -58,6 +62,7 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
     
+    [Posts changeDifficultyRankingFrom:(sourceIndexPath.row + 1) To:(destinationIndexPath.row + 1)];
     
 }
 

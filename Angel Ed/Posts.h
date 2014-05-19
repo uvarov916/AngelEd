@@ -44,10 +44,13 @@
 
 #define kDetailView @"showDetail"
 
-#define kAcademicDifficulty 1;
-#define kProfessionalDifficulty 2;
-#define kNetworkingDifficulty 3;
-#define kCommunityDifficulty 4;
+#define kCategoryRankings @"categoryRankings"
+#define kRankingsByDifficulty @"rankingsByDifficulty"
+
+#define kAcademicDifficulty @"academicDifficulty"
+#define kProfessionalDifficulty @"professionalDifficulty"
+#define kNetworkingDifficulty @"networkingDifficulty"
+#define kCommunityDifficulty @"communityDifficulty"
 
 @interface Posts : NSObject
 
@@ -60,7 +63,16 @@
 +(NSMutableDictionary *)getPostDataForKey:(NSString *)key;
 +(NSMutableDictionary *)getPostDataForCurrentKey;
 
+
+
++(NSMutableDictionary *)getAllRankings;
 +(NSString *)getCategoryByDifficultyRanking:(NSInteger) n;
++(void)changeDifficultyRankingFrom:(NSInteger)old To:(NSInteger)new;
++(void)saveRankings;
+
+
+
+
 
 // Removing posts
 +(void)removePostForKey:(NSString *)key;

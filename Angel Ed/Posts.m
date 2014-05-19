@@ -13,16 +13,43 @@
 static NSMutableDictionary *allPosts;
 static NSMutableDictionary *allCategories;
 static NSMutableDictionary *personalInfo;
+static NSMutableDictionary *categoryRankings;
 static NSString *currentKey;
 
 
 
-+(NSString *)getCategoryByDifficultyRanking:(NSInteger) n {
++(NSMutableDictionary *)getAllRankings {
+    
+    if (categoryRankings == nil) {
+        categoryRankings = [[NSMutableDictionary alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] dictionaryForKey:kCategoryRankings]];
+    }
+    
+    return categoryRankings;
+}
+
++(NSString *)getCategoryByDifficultyRanking:(NSInteger)n {
+    
+    if (categoryRankings == nil) {
+        categoryRankings = [[NSMutableDictionary alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] dictionaryForKey:kCategoryRankings]];
+    }
+    
+    NSMutableDictionary *temp = [[NSMutableDictionary alloc] init];
+    [temp setObject:[NSNumber numberWithInt:1] forKey:kAcademicDifficulty];
+    [temp setObject:[NSNumber numberWithInt:2] forKey:kProfessionalDifficulty];
+    [temp setObject:[NSNumber numberWithInt:3] forKey:kNetworkingDifficulty];
+    [temp setObject:[NSNumber numberWithInt:4] forKey:kCommunityDifficulty];
+    
+    if ([categoryRankings objectForKey:kRankingsByDifficulty] == nil) {
+        [categoryRankings setObject:[[NSMutableDictionary alloc] initWithDictionary:temp] forKey:kRankingsByDifficulty];
+    }
+    
+    NSMutableDictionary *difficulty = [categoryRankings objectForKey:kRankingsByDifficulty];
+    
  
-    NSInteger acad = kAcademicDifficulty;
-    NSInteger prof = kProfessionalDifficulty;
-    NSInteger net = kNetworkingDifficulty;
-    NSInteger com = kCommunityDifficulty;
+    NSInteger acad = [[difficulty objectForKey:kAcademicDifficulty] integerValue];
+    NSInteger prof = [[difficulty objectForKey:kProfessionalDifficulty] integerValue];
+    NSInteger net = [[difficulty objectForKey:kNetworkingDifficulty] integerValue];
+    NSInteger com = [[difficulty objectForKey:kCommunityDifficulty] integerValue];
     
     if (n == acad) {
         return kCategoryAcademic;
@@ -40,8 +67,46 @@ static NSString *currentKey;
         return kCategoryDefault;
     }
     
+    
 }
 
++(void)changeDifficultyRankingFrom:(NSInteger)old To:(NSInteger)new {
+    
+    
+    NSMutableDictionary *difficulty = [categoryRankings objectForKey:kRankingsByDifficulty];
+    
+    NSInteger acad = [[difficulty objectForKey:kAcademicDifficulty] integerValue];
+    NSInteger prof = [[difficulty objectForKey:kProfessionalDifficulty] integerValue];
+    NSInteger net = [[difficulty objectForKey:kNetworkingDifficulty] integerValue];
+    NSInteger com = [[difficulty objectForKey:kCommunityDifficulty] integerValue];
+    
+    
+    if (old < new) {
+        if (acad == old) acad = new; else if (acad <= new && acad > old) acad -= 1;
+        if (prof == old) prof = new; else if (prof <= new && prof > old) prof -= 1;
+        if (net == old) net = new; else if (net <= new && net > old) net -= 1;
+        if (com == old) com = new; else if (com <= new && com > old) com -= 1;
+    }
+    else if (old > new) {
+        if (acad == old) acad = new; else if (acad < old && acad >= new) acad += 1;
+        if (prof == old) prof = new; else if (prof < old && prof >= new) prof += 1;
+        if (net == old) net = new; else if (net < old && net >= new) net += 1;
+        if (com == old) com = new; else if (com < old && com >= new) com += 1;
+    }
+    
+    
+    [difficulty setObject:[NSNumber numberWithInt:acad] forKey:kAcademicDifficulty];
+    [difficulty setObject:[NSNumber numberWithInt:prof] forKey:kProfessionalDifficulty];
+    [difficulty setObject:[NSNumber numberWithInt:net] forKey:kNetworkingDifficulty];
+    [difficulty setObject:[NSNumber numberWithInt:com] forKey:kCommunityDifficulty];
+    
+    [categoryRankings setObject:difficulty forKey:kRankingsByDifficulty];
+    [self saveRankings];
+}
+
++(void)saveRankings {
+    [[NSUserDefaults standardUserDefaults] setObject:categoryRankings forKey:kCategoryRankings];
+}
 
 
 // Getting all posts dictionary
