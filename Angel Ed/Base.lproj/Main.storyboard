@@ -591,6 +591,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="m0c-WK-Mcf" kind="push" id="4D3-gr-rWm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -701,7 +704,48 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQs-Ju-nKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="729"/>
+            <point key="canvasLocation" x="1479" y="729"/>
+        </scene>
+        <!--Interest Ranking Table View Controller - Interest-->
+        <scene sceneID="n3L-bf-2QO">
+            <objects>
+                <tableViewController id="m0c-WK-Mcf" customClass="InterestRankingTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="K5J-VT-oKt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" showsReorderControl="YES" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DefaultCell" textLabel="wvQ-Hr-4jA" style="IBUITableViewCellStyleDefault" id="FjO-sq-Fc8">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FjO-sq-Fc8" id="0lh-M7-zib">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wvQ-Hr-4jA">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m0c-WK-Mcf" id="vKu-iS-13M"/>
+                            <outlet property="delegate" destination="m0c-WK-Mcf" id="zqo-0r-ePZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Interest" id="0sm-TU-Dpz"/>
+                    <connections>
+                        <outlet property="interestTableView" destination="K5J-VT-oKt" id="gWH-Eq-5bh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyT-tQ-Ep1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479" y="1396"/>
         </scene>
         <!--Personal Info View Controller - Personal Info-->
         <scene sceneID="scK-ye-JI8">
@@ -743,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmi-Kb-5LH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="1401"/>
+            <point key="canvasLocation" x="1408" y="1859"/>
         </scene>
         <!--Contact Us View Controller - Contact us-->
         <scene sceneID="gHb-GZ-abD">

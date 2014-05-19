@@ -104,9 +104,88 @@ static NSString *currentKey;
     [self saveRankings];
 }
 
++(NSString *)getCategoryByInterestRanking:(NSInteger)n {
+    
+    if (categoryRankings == nil) {
+        categoryRankings = [[NSMutableDictionary alloc] initWithDictionary:[[NSUserDefaults standardUserDefaults] dictionaryForKey:kCategoryRankings]];
+    }
+    
+    NSMutableDictionary *temp = [[NSMutableDictionary alloc] init];
+    [temp setObject:[NSNumber numberWithInt:1] forKey:kAcademicInterest];
+    [temp setObject:[NSNumber numberWithInt:2] forKey:kProfessionalInterest];
+    [temp setObject:[NSNumber numberWithInt:3] forKey:kNetworkingInterest];
+    [temp setObject:[NSNumber numberWithInt:4] forKey:kCommunityInterest];
+    
+    if ([categoryRankings objectForKey:kRankingsByInterest] == nil) {
+        [categoryRankings setObject:[[NSMutableDictionary alloc] initWithDictionary:temp] forKey:kRankingsByInterest];
+    }
+    
+    NSMutableDictionary *interest = [categoryRankings objectForKey:kRankingsByInterest];
+    
+    
+    NSInteger acad = [[interest objectForKey:kAcademicInterest] integerValue];
+    NSInteger prof = [[interest objectForKey:kProfessionalInterest] integerValue];
+    NSInteger net = [[interest objectForKey:kNetworkingInterest] integerValue];
+    NSInteger com = [[interest objectForKey:kCommunityInterest] integerValue];
+    
+    if (n == acad) {
+        return kCategoryAcademic;
+    }
+    else if (n == prof) {
+        return kCategoryProfessional;
+    }
+    else if (n == net) {
+        return kCategoryNetworking;
+    }
+    else if (n == com) {
+        return kCategoryCommunity;
+    }
+    else {
+        return kCategoryDefault;
+    }
+    
+    
+}
+
++(void)changeInterestRankingFrom:(NSInteger)old To:(NSInteger)new {
+    
+    
+    NSMutableDictionary *interest = [categoryRankings objectForKey:kRankingsByInterest];
+    
+    NSInteger acad = [[interest objectForKey:kAcademicInterest] integerValue];
+    NSInteger prof = [[interest objectForKey:kProfessionalInterest] integerValue];
+    NSInteger net = [[interest objectForKey:kNetworkingInterest] integerValue];
+    NSInteger com = [[interest objectForKey:kCommunityInterest] integerValue];
+    
+    
+    if (old < new) {
+        if (acad == old) acad = new; else if (acad <= new && acad > old) acad -= 1;
+        if (prof == old) prof = new; else if (prof <= new && prof > old) prof -= 1;
+        if (net == old) net = new; else if (net <= new && net > old) net -= 1;
+        if (com == old) com = new; else if (com <= new && com > old) com -= 1;
+    }
+    else if (old > new) {
+        if (acad == old) acad = new; else if (acad < old && acad >= new) acad += 1;
+        if (prof == old) prof = new; else if (prof < old && prof >= new) prof += 1;
+        if (net == old) net = new; else if (net < old && net >= new) net += 1;
+        if (com == old) com = new; else if (com < old && com >= new) com += 1;
+    }
+    
+    
+    [interest setObject:[NSNumber numberWithInt:acad] forKey:kAcademicInterest];
+    [interest setObject:[NSNumber numberWithInt:prof] forKey:kProfessionalInterest];
+    [interest setObject:[NSNumber numberWithInt:net] forKey:kNetworkingInterest];
+    [interest setObject:[NSNumber numberWithInt:com] forKey:kCommunityInterest];
+    
+    [categoryRankings setObject:interest forKey:kRankingsByInterest];
+    [self saveRankings];
+}
+
 +(void)saveRankings {
     [[NSUserDefaults standardUserDefaults] setObject:categoryRankings forKey:kCategoryRankings];
 }
+
+
 
 
 // Getting all posts dictionary

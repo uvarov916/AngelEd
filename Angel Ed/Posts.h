@@ -46,11 +46,17 @@
 
 #define kCategoryRankings @"categoryRankings"
 #define kRankingsByDifficulty @"rankingsByDifficulty"
+#define kRankingsByInterest @"rankingsByInterest"
 
 #define kAcademicDifficulty @"academicDifficulty"
 #define kProfessionalDifficulty @"professionalDifficulty"
 #define kNetworkingDifficulty @"networkingDifficulty"
 #define kCommunityDifficulty @"communityDifficulty"
+
+#define kAcademicInterest @"academicInterest"
+#define kProfessionalInterest @"professionalInterest"
+#define kNetworkingInterest @"networkingInterest"
+#define kCommunityInterest @"communityInterest"
 
 @interface Posts : NSObject
 
@@ -68,6 +74,8 @@
 +(NSMutableDictionary *)getAllRankings;
 +(NSString *)getCategoryByDifficultyRanking:(NSInteger) n;
 +(void)changeDifficultyRankingFrom:(NSInteger)old To:(NSInteger)new;
++(NSString *)getCategoryByInterestRanking:(NSInteger) n;
++(void)changeInterestRankingFrom:(NSInteger)old To:(NSInteger)new;
 +(void)saveRankings;
 
 

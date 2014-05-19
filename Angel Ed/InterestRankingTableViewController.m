@@ -1,19 +1,19 @@
 //
-//  DifficultyRankingTableViewController.m
+//  InterestRankingTableViewController.m
 //  Angel Ed
 //
 //  Created by Иван on 5/15/14.
 //  Copyright (c) 2014 Global App Initiative. All rights reserved.
 //
 
-#import "DifficultyRankingTableViewController.h"
+#import "InterestRankingTableViewController.h"
 #import "Posts.h"
 
-@interface DifficultyRankingTableViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface InterestRankingTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation DifficultyRankingTableViewController
+@implementation InterestRankingTableViewController
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger tmp = 1;
@@ -28,25 +28,25 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DefaultCell" forIndexPath:indexPath];
-
-    cell.textLabel.text = [[Posts getCategoryByDifficultyRanking:(indexPath.row + 1)] capitalizedString];
+    
+    cell.textLabel.text = [[Posts getCategoryByInterestRanking:(indexPath.row + 1)] capitalizedString];
     
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"The most difficult";
+    return @"The most interesting";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    return @"THE LEAST DIFFICULT";
+    return @"THE LEAST INTERESTING";
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [self.difficultyTableView setEditing:YES animated:NO];
+    
+    [self.interestTableView setEditing:YES animated:NO];
     
 }
 
@@ -62,7 +62,7 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
     
-    [Posts changeDifficultyRankingFrom:(sourceIndexPath.row + 1) To:(destinationIndexPath.row + 1)];
+    [Posts changeInterestRankingFrom:(sourceIndexPath.row + 1) To:(destinationIndexPath.row + 1)];
     
 }
 
