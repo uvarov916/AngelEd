@@ -28,7 +28,8 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DefaultCell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Test";
+
+    cell.textLabel.text = [Posts getCategoryByDifficultyRanking:(indexPath.row + 1)];
     
     return cell;
 }

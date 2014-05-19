@@ -15,6 +15,35 @@ static NSMutableDictionary *allCategories;
 static NSMutableDictionary *personalInfo;
 static NSString *currentKey;
 
+
+
++(NSString *)getCategoryByDifficultyRanking:(NSInteger) n {
+ 
+    NSInteger acad = kAcademicDifficulty;
+    NSInteger prof = kProfessionalDifficulty;
+    NSInteger net = kNetworkingDifficulty;
+    NSInteger com = kCommunityDifficulty;
+    
+    if (n == acad) {
+        return kCategoryAcademic;
+    }
+    else if (n == prof) {
+        return kCategoryProfessional;
+    }
+    else if (n == net) {
+        return kCategoryNetworking;
+    }
+    else if (n == com) {
+        return kCategoryCommunity;
+    }
+    else {
+        return kCategoryDefault;
+    }
+    
+}
+
+
+
 // Getting all posts dictionary
 +(NSMutableDictionary *)getAllPosts {
     
@@ -316,6 +345,7 @@ static NSString *currentKey;
 //    NSLog(@"Networking: %i", [[[Posts getAllCategories] objectForKey:kCategoryNetworking] intValue]);
 //    NSLog(@"Community: %i", [[[Posts getAllCategories] objectForKey:kCategoryCommunity] intValue]);
 }
+
 
 
 

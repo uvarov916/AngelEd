@@ -60,6 +60,8 @@
 +(NSMutableDictionary *)getPostDataForKey:(NSString *)key;
 +(NSMutableDictionary *)getPostDataForCurrentKey;
 
++(NSString *)getCategoryByDifficultyRanking:(NSInteger) n;
+
 // Removing posts
 +(void)removePostForKey:(NSString *)key;
 // Savind data to user defaults
