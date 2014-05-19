@@ -10,5 +10,6 @@
 
 @interface DifficultyRankingTableViewController : UITableViewController
 @property (strong, nonatomic) IBOutlet UITableView *difficultyTableView;
+- (IBAction)doneButton:(id)sender;
 
 @end

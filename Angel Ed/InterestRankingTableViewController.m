@@ -70,4 +70,8 @@
     return UITableViewCellEditingStyleNone;
 }
 
+- (IBAction)doneButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

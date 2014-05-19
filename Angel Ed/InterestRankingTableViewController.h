@@ -10,5 +10,6 @@
 
 @interface InterestRankingTableViewController : UITableViewController
 @property (strong, nonatomic) IBOutlet UITableView *interestTableView;
+- (IBAction)doneButton:(id)sender;
 
 @end
