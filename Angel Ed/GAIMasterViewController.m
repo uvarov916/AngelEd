@@ -51,7 +51,7 @@
         
         
 //        self.navigationItem.leftBarButtonItem = nil;
-        self.navigationItem.rightBarButtonItem = nil;
+        // self.navigationItem.rightBarButtonItem = nil;
         [self makeObjectsWithData:self.selectedButton];
         
     }
