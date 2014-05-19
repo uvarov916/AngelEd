@@ -1,7 +1,7 @@
 This is the iOS application created for Angel Ed.
 
 To-do:
-- Posts page:
+- [ ] Posts page:
 	- Skiping post page when user creates new post
 	- Decreasing tabbar and navbar opacity
 	- Handling empty fields with alerts
