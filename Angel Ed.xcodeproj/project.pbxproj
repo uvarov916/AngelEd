@@ -11,13 +11,13 @@
 		2C2BD2E61907999D0017CF03 /* editTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BD2E51907999D0017CF03 /* editTitleViewController.m */; };
 		2C2BD2E9190799AF0017CF03 /* editTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BD2E8190799AF0017CF03 /* editTextViewController.m */; };
 		2C55048F1923CC9E00EBC2EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C55048E1923CC9E00EBC2EE /* QuartzCore.framework */; };
+		2C5504921924DDEE00EBC2EE /* DifficultyRankingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5504911924DDED00EBC2EE /* DifficultyRankingTableViewController.m */; };
 		2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58931618E7A88400E392B6 /* UIColor+Extras.m */; };
 		2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C58932218E7C08F00E392B6 /* MPTextView.m */; };
 		2C7CBF931908FD8100783919 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBF921908FD8100783919 /* StatsViewController.m */; };
 		2C7CBFA3190B853C00783919 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBFA2190B853C00783919 /* ProfileViewController.m */; };
 		2C7CBFA6190BB4F000783919 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBFA5190BB4F000783919 /* PersonalInfoViewController.m */; };
 		2C7CBFAF190BCABC00783919 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBFAE190BCABC00783919 /* ContactUsViewController.m */; };
-		2C7CBFB2190BF8BB00783919 /* DifficultyRankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CBFB1190BF8BB00783919 /* DifficultyRankingViewController.m */; };
 		2CDA51AA190628440074F7CB /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */; };
 		2CE24AA518E4F5C40091D406 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA418E4F5C40091D406 /* Foundation.framework */; };
 		2CE24AA718E4F5C40091D406 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE24AA618E4F5C40091D406 /* CoreGraphics.framework */; };
@@ -55,6 +55,8 @@
 		2C2BD2E7190799AF0017CF03 /* editTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editTextViewController.h; sourceTree = "<group>"; };
 		2C2BD2E8190799AF0017CF03 /* editTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editTextViewController.m; sourceTree = "<group>"; };
 		2C55048E1923CC9E00EBC2EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2C5504901924DDED00EBC2EE /* DifficultyRankingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyRankingTableViewController.h; sourceTree = "<group>"; };
+		2C5504911924DDED00EBC2EE /* DifficultyRankingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyRankingTableViewController.m; sourceTree = "<group>"; };
 		2C58931518E7A88400E392B6 /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
 		2C58931618E7A88400E392B6 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
 		2C58932118E7C08F00E392B6 /* MPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTextView.h; sourceTree = "<group>"; };
@@ -67,8 +69,6 @@
 		2C7CBFA5190BB4F000783919 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
 		2C7CBFAD190BCABC00783919 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		2C7CBFAE190BCABC00783919 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
-		2C7CBFB0190BF8BB00783919 /* DifficultyRankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyRankingViewController.h; sourceTree = "<group>"; };
-		2C7CBFB1190BF8BB00783919 /* DifficultyRankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyRankingViewController.m; sourceTree = "<group>"; };
 		2CDA51A8190628440074F7CB /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
 		2CDA51A9190628440074F7CB /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
 		2CE24AA118E4F5C40091D406 /* Angel Ed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Angel Ed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,8 +128,8 @@
 				2C7CBFA4190BB4F000783919 /* PersonalInfoViewController.h */,
 				2C7CBFAD190BCABC00783919 /* ContactUsViewController.h */,
 				2C7CBFAE190BCABC00783919 /* ContactUsViewController.m */,
-				2C7CBFB0190BF8BB00783919 /* DifficultyRankingViewController.h */,
-				2C7CBFB1190BF8BB00783919 /* DifficultyRankingViewController.m */,
+				2C5504901924DDED00EBC2EE /* DifficultyRankingTableViewController.h */,
+				2C5504911924DDED00EBC2EE /* DifficultyRankingTableViewController.m */,
 			);
 			name = "Settings page";
 			sourceTree = "<group>";
@@ -348,10 +348,10 @@
 				2C58931718E7A88400E392B6 /* UIColor+Extras.m in Sources */,
 				2CE24AB518E4F5C40091D406 /* GAIAppDelegate.m in Sources */,
 				2C7CBFA6190BB4F000783919 /* PersonalInfoViewController.m in Sources */,
+				2C5504921924DDEE00EBC2EE /* DifficultyRankingTableViewController.m in Sources */,
 				2C7CBFA3190B853C00783919 /* ProfileViewController.m in Sources */,
 				2CE24ABB18E4F5C40091D406 /* GAIMasterViewController.m in Sources */,
 				2C7CBFAF190BCABC00783919 /* ContactUsViewController.m in Sources */,
-				2C7CBFB2190BF8BB00783919 /* DifficultyRankingViewController.m in Sources */,
 				2CE24AB118E4F5C40091D406 /* main.m in Sources */,
 				2C2BD2E61907999D0017CF03 /* editTitleViewController.m in Sources */,
 				2C58932318E7C08F00E392B6 /* MPTextView.m in Sources */,

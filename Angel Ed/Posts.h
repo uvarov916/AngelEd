@@ -44,6 +44,11 @@
 
 #define kDetailView @"showDetail"
 
+#define kAcademicDifficulty 1;
+#define kProfessionalDifficulty 2;
+#define kNetworkingDifficulty 3;
+#define kCommunityDifficulty 4;
+
 @interface Posts : NSObject
 
 +(NSString *)convertMonthToText:(NSString *)num;
